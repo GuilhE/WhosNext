@@ -1,0 +1,107 @@
+[versions]
+
+androidCompileSdk = "34"
+androidTargetSdk = "34"
+androidMinSdk = "24"
+
+#======Gradle
+gradleAndroidTools = "8.2.2"
+gradleComposeMultiplatform = "1.6.0"
+
+#======Kotlin
+kotlin = "1.9.22"
+kotlinxCoroutines = "1.8.0"
+kotlinxSerialization = "1.6.3"
+kotlinxAtomicFu = "0.23.2"
+ksp = "1.9.22-1.0.17"
+
+#======Compose Multiplatform
+#https://www.jetbrains.com/help/kotlin-multiplatform-dev/compose-compatibility-and-versioning.html
+#https://maven.pkg.jetbrains.space/public/p/compose/dev/org/jetbrains/compose/compiler/compiler/
+composeMultiplatformCompiler = "1.5.8.1-beta02"
+
+#======Jetpack Compose
+#https://androidx.dev/storage/compose-compiler/repository
+androidxCompose = "1.6.3"
+androidxComposeCompiler = "1.5.8-dev-k1.9.22-42b6ec2b037"
+androidxComposeLifecycle = "2.7.0"
+androidxComposeMaterial3 = "1.2.1"
+androidxUiUtilAndroid = "1.6.3"
+
+#======Android
+androidxActivityKtx = "1.8.2"
+androidxLifecycle = "2.7.0"
+androidMaterial = "1.11.0"
+
+#======Multiplatform
+kermit = "2.0.2"
+koin = "3.6.0-wasm-alpha2"
+kmpViewModel = "1.0.0-ALPHA-19"
+kmpSettings = "1.1.1"
+kmpConstraintlayout = "0.3.0-rc02"
+nativecoroutines = "1.0.0-ALPHA-25"
+
+[plugins]
+
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+nativecoroutines = { id = "com.rickclephas.kmp.nativecoroutines", version.ref = "nativecoroutines" }
+
+[libraries]
+
+#======Gradle
+gradle-kotlin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+gradle-kotlin-serialization = { group = "org.jetbrains.kotlin", name = "kotlin-serialization", version.ref = "kotlin" }
+gradle-android-tools = { group = "com.android.tools.build", name = "gradle", version.ref = "gradleAndroidTools" }
+gradle-compose-multiplatform = { group = "org.jetbrains.compose", name = "compose-gradle-plugin", version.ref = "gradleComposeMultiplatform" }
+
+#======Jetbrains
+jetbrains-kotlinx-serialization = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinxSerialization" }
+jetbrains-kotlinx-atomicfu = { group = "org.jetbrains.kotlinx", name = "atomicfu", version.ref = "kotlinxAtomicFu" }
+jetbrains-kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "kotlinxCoroutines" }
+jetbrains-kotlinx-coroutines-swing = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-swing", version.ref = "kotlinxCoroutines" }
+
+#======Multiplatform
+kermit = { group = "co.touchlab", name = "kermit", version.ref = "kermit" }
+koin-core = { group = "io.insert-koin", name = "koin-core", version.ref = "koin" }
+koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koin" }
+kmp-settings = { group = "com.russhwolf", name = "multiplatform-settings", version.ref = "kmpSettings" }
+kmp-constraintlayout = { group = "tech.annexflow.compose", name = "constraintlayout-compose-multiplatform", version.ref = "kmpConstraintlayout" }
+kmp-viewmodel = { group = "com.rickclephas.kmm", name = "kmm-viewmodel-core", version.ref = "kmpViewModel" }
+
+#======Android
+android-material = { group = "com.google.android.material", name = "material", version.ref = "androidMaterial" }
+androidx-lifecycle-runtime = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "androidxLifecycle" }
+
+androidx-compose-activity = { group = "androidx.activity", name = "activity-compose", version.ref = "androidxActivityKtx" }
+androidx-compose-foundation = { group = "androidx.compose.foundation", name = "foundation", version.ref = "androidxCompose" }
+androidx-compose-foundation-layout = { group = "androidx.compose.foundation", name = "foundation-layout", version.ref = "androidxCompose" }
+androidx-compose-material = { group = "androidx.compose.material", name = "material", version.ref = "androidxCompose" }
+androidx-compose-material-iconsExtended = { group = "androidx.compose.material", name = "material-icons-extended", version.ref = "androidxCompose" }
+androidx-compose-material3 = { group = "androidx.compose.material3", name = "material3", version.ref = "androidxComposeMaterial3" }
+androidx-compose-runtime = { group = "androidx.compose.runtime", name = "runtime", version.ref = "androidxCompose" }
+androidx-compose-lifecycle-runtime = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "androidxComposeLifecycle" }
+androidx-compose-ui = { group = "androidx.compose.ui", name = "ui", version.ref = "androidxCompose" }
+androidx-compose-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics", version.ref = "androidxCompose" }
+androidx-compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling", version.ref = "androidxCompose" }
+androidx-compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview", version.ref = "androidxCompose" }
+androidx-compose-ui-util = { group = "androidx.compose.ui", name = "ui-util", version.ref = "androidxCompose" }
+androidx-compose-ui-util-android = { group = "androidx.compose.ui", name = "ui-util-android", version.ref = "androidxUiUtilAndroid" }
+
+[bundles]
+
+androidx-compose = [
+    "androidx-compose-activity",
+    "androidx-compose-foundation",
+    "androidx-compose-foundation-layout",
+    "androidx-compose-material",
+    "androidx-compose-material-iconsExtended",
+    "androidx-compose-material3",
+    "androidx-compose-runtime",
+    "androidx-compose-lifecycle-runtime",
+    "androidx-compose-ui",
+    "androidx-compose-ui-graphics",
+    "androidx-compose-ui-tooling",
+    "androidx-compose-ui-tooling-preview",
+    "androidx-compose-ui-util",
+    "androidx-compose-ui-util-android"
+]
