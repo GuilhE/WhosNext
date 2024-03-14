@@ -38,8 +38,8 @@ import com.whosnext.ui.theme.PurpleTheme
 import com.whosnext.ui.theme.YellowTheme
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.painterResource
-import whosnext.`shared-ui`.generated.resources.Res
-import whosnext.`shared-ui`.generated.resources.bg_texture
+import whosnext.shared_ui.generated.resources.Res
+import whosnext.shared_ui.generated.resources.bg_texture
 
 @OptIn(ExperimentalResourceApi::class)
 @Composable

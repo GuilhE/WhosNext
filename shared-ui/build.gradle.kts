@@ -14,7 +14,6 @@ plugins {
 
 compose {
     kotlinCompilerPlugin.set(libs.versions.composeMultiplatformCompiler)
-//    kotlinCompilerPluginArgs.add("suppressKotlinVersionCompatibilityCheck=1.9.23")
     applyTemporaryWasmSettings()    //TODO: remove when compose.components.resources support multi module
 }
 
@@ -72,8 +71,8 @@ fun BaseAppModuleExtension.applyTemporaryAndroidSettings() {
 
     defaultConfig {
         applicationId = "com.whosnext.app"
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 5
+        versionName = "2.0.0"
         minSdk = libs.versions.androidMinSdk.get().toInt()
         targetSdk = libs.versions.androidTargetSdk.get().toInt()
 

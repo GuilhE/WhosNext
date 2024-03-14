@@ -28,11 +28,11 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.painterResource
-import whosnext.`shared-ui`.generated.resources.Res
-import whosnext.`shared-ui`.generated.resources.bg_texture
-import whosnext.`shared-ui`.generated.resources.ic_chrono_ball
-import whosnext.`shared-ui`.generated.resources.ic_logo_alt
-import whosnext.`shared-ui`.generated.resources.ic_zone
+import whosnext.shared_ui.generated.resources.Res
+import whosnext.shared_ui.generated.resources.bg_texture
+import whosnext.shared_ui.generated.resources.ic_chrono_ball
+import whosnext.shared_ui.generated.resources.ic_logo_alt
+import whosnext.shared_ui.generated.resources.ic_zone
 
 private val EaseOutBounce: Easing = Easing { fraction ->
     val n1 = 7.5625f

@@ -30,8 +30,8 @@ import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.skiko.SkikoMouseButtons
 import org.jetbrains.skiko.SkikoPointerEvent
 import org.jetbrains.skiko.SkikoPointerEventKind
-import whosnext.`shared-ui`.generated.resources.Res
-import whosnext.`shared-ui`.generated.resources.bg_texture
+import whosnext.shared_ui.generated.resources.Res
+import whosnext.shared_ui.generated.resources.bg_texture
 
 @OptIn(ExperimentalResourceApi::class)
 @Composable

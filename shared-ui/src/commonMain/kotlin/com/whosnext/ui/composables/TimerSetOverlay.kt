@@ -28,12 +28,12 @@ import com.whosnext.ui.theme.OverlayTheme
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
-import whosnext.`shared-ui`.generated.resources.Res
-import whosnext.`shared-ui`.generated.resources.ic_setter_center
-import whosnext.`shared-ui`.generated.resources.ic_setter_gesture
-import whosnext.`shared-ui`.generated.resources.lbl_minutes
-import whosnext.`shared-ui`.generated.resources.lbl_seconds
-import whosnext.`shared-ui`.generated.resources.lbl_sep
+import whosnext.shared_ui.generated.resources.Res
+import whosnext.shared_ui.generated.resources.ic_setter_center
+import whosnext.shared_ui.generated.resources.ic_setter_gesture
+import whosnext.shared_ui.generated.resources.lbl_minutes
+import whosnext.shared_ui.generated.resources.lbl_seconds
+import whosnext.shared_ui.generated.resources.lbl_sep
 
 @OptIn(ExperimentalResourceApi::class)
 @Composable

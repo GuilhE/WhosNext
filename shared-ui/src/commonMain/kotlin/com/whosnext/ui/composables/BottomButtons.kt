@@ -18,10 +18,10 @@ import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.unit.dp
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.painterResource
-import whosnext.`shared-ui`.generated.resources.Res
-import whosnext.`shared-ui`.generated.resources.bt_pause
-import whosnext.`shared-ui`.generated.resources.bt_play
-import whosnext.`shared-ui`.generated.resources.bt_reset
+import whosnext.shared_ui.generated.resources.Res
+import whosnext.shared_ui.generated.resources.bt_pause
+import whosnext.shared_ui.generated.resources.bt_play
+import whosnext.shared_ui.generated.resources.bt_reset
 
 @OptIn(ExperimentalResourceApi::class)
 @Composable

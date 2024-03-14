@@ -31,9 +31,9 @@ import com.whosnext.ui.theme.SplashTheme
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
-import whosnext.`shared-ui`.generated.resources.Res
-import whosnext.`shared-ui`.generated.resources.bg_texture
-import whosnext.`shared-ui`.generated.resources.lbl_start
+import whosnext.shared_ui.generated.resources.Res
+import whosnext.shared_ui.generated.resources.bg_texture
+import whosnext.shared_ui.generated.resources.lbl_start
 
 @OptIn(ExperimentalResourceApi::class)
 @Composable

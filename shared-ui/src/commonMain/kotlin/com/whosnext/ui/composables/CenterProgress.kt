@@ -26,9 +26,9 @@ import com.whosnext.ui.STOP_ANIMATION_DURATION
 import com.whosnext.ui.theme.DigitsTheme
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.painterResource
-import whosnext.`shared-ui`.generated.resources.Res
-import whosnext.`shared-ui`.generated.resources.bg_watch
-import whosnext.`shared-ui`.generated.resources.ic_watch
+import whosnext.shared_ui.generated.resources.Res
+import whosnext.shared_ui.generated.resources.bg_watch
+import whosnext.shared_ui.generated.resources.ic_watch
 
 @OptIn(ExperimentalResourceApi::class)
 @Composable

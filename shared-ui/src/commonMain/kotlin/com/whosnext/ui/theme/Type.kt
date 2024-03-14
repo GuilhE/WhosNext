@@ -6,9 +6,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.text.font.FontFamily
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.Font
-import whosnext.`shared-ui`.generated.resources.Res
-import whosnext.`shared-ui`.generated.resources.helvetica_neue_light
-import whosnext.`shared-ui`.generated.resources.whosnext_light_italic
+import whosnext.shared_ui.generated.resources.Res
+import whosnext.shared_ui.generated.resources.helvetica_neue_light
+import whosnext.shared_ui.generated.resources.whosnext_light_italic
 
 @OptIn(ExperimentalResourceApi::class)
 private val helveticaNeueFontFamily
