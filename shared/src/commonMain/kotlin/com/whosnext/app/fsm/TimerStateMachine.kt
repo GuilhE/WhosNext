@@ -22,7 +22,7 @@ internal class TimerStateMachine(
     override val disableLogs: Boolean = false
 
     private val cache = StateMachineCache(stateMachineName, get())
-    private val stateMachine = StateMachine.create {
+    private val stateMachine = StateMachine.create<TimerState.State, TimerState.Event, TimerState.SideEffect> {
         val snapshot: StateMachineSnapshot<TimerState.State, TimerState.Event>? = if (shouldRestoreState) cache.restoreState() else null
         val initialState = snapshot?.state ?: TimerState.State.Idle
         initialState(initialState).apply {

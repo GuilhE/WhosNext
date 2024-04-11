@@ -1,12 +1,14 @@
 @file:Suppress("UnstableApiUsage")
 
-import com.android.build.api.dsl.CommonExtension
+package extensions
+
+import com.android.build.api.dsl.ApplicationExtension
 import org.gradle.api.Project
 import org.gradle.api.artifacts.VersionCatalog
 import org.gradle.kotlin.dsl.dependencies
 import java.io.File
 
-internal fun CommonExtension<*, *, *, *, *>.addComposeOptions(libs: VersionCatalog) {
+internal fun ApplicationExtension.addComposeOptions(libs: VersionCatalog) {
     buildFeatures {
         compose = true
     }

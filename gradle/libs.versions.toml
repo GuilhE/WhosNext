@@ -5,20 +5,20 @@ androidTargetSdk = "34"
 androidMinSdk = "24"
 
 #======Gradle
-gradleAndroidTools = "8.2.2"
-gradleComposeMultiplatform = "1.6.1"
+gradleAndroidTools = "8.3.2"
+gradleComposeMultiplatform = "1.6.2"
 
 #======Kotlin
-kotlin = "1.9.23"
+kotlin = "2.0.0-RC1"
 kotlinxCoroutines = "1.8.0"
 kotlinxSerialization = "1.6.3"
 kotlinxAtomicFu = "0.23.2"
-ksp = "1.9.23-1.0.19"
+ksp = "2.0.0-RC1-1.0.20"
 
 #======Compose Multiplatform
 #https://www.jetbrains.com/help/kotlin-multiplatform-dev/compose-compatibility-and-versioning.html
 #https://maven.pkg.jetbrains.space/public/p/compose/dev/org/jetbrains/compose/compiler/compiler/
-composeMultiplatformCompiler = "1.5.10.1"
+composeMultiplatformCompiler = "1.5.11-kt-2.0.0-RC1"
 
 #======Jetpack Compose
 #https://developer.android.com/jetpack/androidx/releases/compose-kotlin?hl=pt-br#pre-release_kotlin_compatibility
@@ -37,10 +37,10 @@ androidMaterial = "1.11.0"
 #======Multiplatform
 kermit = "2.0.2"
 koin = "3.6.0-wasm-alpha2"
-kmpViewModel = "1.0.0-ALPHA-19"
+kmpViewModel = "1.0.0-ALPHA-20"
 kmpSettings = "1.1.1"
 kmpConstraintlayout = "0.3.0-rc02"
-nativecoroutines = "1.0.0-ALPHA-25"
+nativecoroutines = "1.0.0-ALPHA-27"
 
 [plugins]
 

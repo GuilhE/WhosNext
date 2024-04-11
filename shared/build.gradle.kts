@@ -1,4 +1,5 @@
-import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
+@file:Suppress("OPT_IN_USAGE")
+
 import org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalWasmDsl
 
 plugins {
@@ -43,9 +44,10 @@ kotlin {
             api(libs.kermit)
         }
         androidMain.dependencies { implementation(libs.koin.android) }
-
-        targets.withType<KotlinNativeTarget> {
-            compilations["main"].kotlinOptions.freeCompilerArgs += "-Xexport-kdoc"
+        iosMain {
+            compilerOptions {
+                freeCompilerArgs.add("-Xexport-kdoc")
+            }
         }
     }
 }

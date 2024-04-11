@@ -25,6 +25,7 @@ allprojects {
                         findByName("android$artifact$variant")?.let(::remove)
                     }
                 }
+//                findByName(":shared:testClasses")?.let(::remove)
             }
         }
     }
@@ -32,7 +33,7 @@ allprojects {
 
 // TODO: Remove once default NodeJS version supports wasm
 rootProject.extensions.findByType<NodeJsRootExtension>()?.apply {
-    nodeVersion = "v22.0.0-v8-canary20240219209428711c"
+    version = "v22.0.0-v8-canary20240219209428711c"
     nodeDownloadBaseUrl = "https://nodejs.org/download/v8-canary"
 }
 tasks.withType<KotlinNpmInstallTask>().configureEach {

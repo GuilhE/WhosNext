@@ -2,14 +2,16 @@
 
 import com.android.build.gradle.LibraryExtension
 import extensions.addKotlinAndroidConfigurations
-import org.gradle.api.JavaVersion
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.artifacts.VersionCatalogsExtension
 import org.gradle.kotlin.dsl.configure
 import org.gradle.kotlin.dsl.getByType
+import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension
 
+@OptIn(ExperimentalKotlinGradlePluginApi::class)
 class KMPAndroidLibraryConventionPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
@@ -22,10 +24,8 @@ class KMPAndroidLibraryConventionPlugin : Plugin<Project> {
             }
             extensions.configure<KotlinMultiplatformExtension> {
                 androidTarget {
-                    compilations.all {
-                        kotlinOptions {
-                            jvmTarget = JavaVersion.VERSION_17.toString()
-                        }
+                    compilerOptions {
+                        jvmTarget.set(JvmTarget.JVM_17)
                     }
                 }
             }
