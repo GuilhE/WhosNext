@@ -17,9 +17,9 @@ buildscript {
 
 allprojects {
     afterEvaluate {
-        //https://discuss.kotlinlang.org/t/disabling-androidandroidtestrelease-source-set-in-gradle-kotlin-dsl-script
         project.extensions.findByType<KotlinMultiplatformExtension>()?.let { ext ->
             ext.sourceSets {
+                //https://discuss.kotlinlang.org/t/disabling-androidandroidtestrelease-source-set-in-gradle-kotlin-dsl-script
                 sequenceOf("AndroidTest", "TestFixtures").forEach { artifact ->
                     sequenceOf("", "Release", "Debug").forEach { variant ->
                         findByName("android$artifact$variant")?.let(::remove)
@@ -32,8 +32,8 @@ allprojects {
 
 // TODO: Remove once default NodeJS version supports wasm
 rootProject.extensions.findByType<NodeJsRootExtension>()?.apply {
-    nodeVersion = "v22.0.0-v8-canary20240219209428711c"
-    nodeDownloadBaseUrl = "https://nodejs.org/download/v8-canary"
+    version = "v22.0.0-v8-canary20240219209428711c"
+    downloadBaseUrl = "https://nodejs.org/download/v8-canary"
 }
 tasks.withType<KotlinNpmInstallTask>().configureEach {
     args.add("--ignore-engines")

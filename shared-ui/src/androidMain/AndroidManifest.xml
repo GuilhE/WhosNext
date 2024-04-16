@@ -8,7 +8,7 @@
             android:label="@string/app_name_label"
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
-            android:theme="@style/FullscreenTranslucent"
+            android:theme="@style/Theme.Design.NoActionBar"
             tools:ignore="LockedOrientationActivity">
         <activity
                 android:name="com.whosnext.ui.TimerActivity"

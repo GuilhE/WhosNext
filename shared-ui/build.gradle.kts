@@ -1,7 +1,9 @@
+@file:Suppress("OPT_IN_USAGE")
+
 import com.android.build.gradle.internal.dsl.BaseAppModuleExtension
 import org.jetbrains.compose.ComposeExtension
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension
-import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
 import org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalWasmDsl
 
 plugins {
@@ -14,21 +16,19 @@ plugins {
 
 compose {
     kotlinCompilerPlugin.set(libs.versions.composeMultiplatformCompiler)
-    applyTemporaryWasmSettings()    //TODO: remove when compose.components.resources support multi module
+    applyTemporaryWasmSettings()    //TODO: remove when compose.components.resources support multi-module
 }
 
 android {
     namespace = "com.whosnext.ui"
-    applyTemporaryAndroidSettings()    //TODO: remove when compose.components.resources support multi module
+    applyTemporaryAndroidSettings()    //TODO: remove when compose.components.resources support multi-module
 }
 
 kotlin {
     androidTarget() {
         //TODO: remove this configurations when buildlogic.plugins.kmp.library.android could be imported
-        compilations.all {
-            kotlinOptions {
-                jvmTarget = JavaVersion.VERSION_17.toString()
-            }
+        compilerOptions {
+            jvmTarget.set(JvmTarget.JVM_17)
         }
     }
     jvm("desktop")
@@ -53,17 +53,19 @@ kotlin {
         val desktopMain by getting
         desktopMain.dependencies { implementation(compose.preview) }
 
-        iosMain.dependencies { implementation(projects.shared) }
-        targets.withType<KotlinNativeTarget> {
-            compilations["main"].kotlinOptions.freeCompilerArgs += "-Xbinary=bundleId=com.whosnext.ui"
+        iosMain {
+            dependencies { implementation(projects.shared) }
+            compilerOptions {
+                freeCompilerArgs.add("-Xbinary=bundleId=com.whosnext.ui")
+            }
         }
     }
 }
 
 //TODO:
-//  Multi module projects are not fully supported yet when using compose.components.resources.
+//  Multi-module projects are not fully supported yet when using compose.components.resources.
 //  https://www.jetbrains.com/help/kotlin-multiplatform-dev/compose-images-resources.html
-//  When they do, we can remove the following functions and use the [browserApp] and [androidApp] module
+//  When they do, we can remove the following functions and use the [browserApp] and [androidApp] modules
 
 fun BaseAppModuleExtension.applyTemporaryAndroidSettings() {
     namespace = "com.whosnext.app"
@@ -136,11 +138,11 @@ fun KotlinMultiplatformExtension.applyTemporaryWasmSettings() {
             }
         }
         binaries.executable()
-        sourceSets {
-            val wasmJsMain by getting {
-                dependencies {
-                    implementation(projects.shared)
-                }
+    }
+    sourceSets {
+        val wasmJsMain by getting {
+            dependencies {
+                implementation(projects.shared)
             }
         }
     }
