@@ -36,11 +36,11 @@ androidMaterial = "1.11.0"
 
 #======Multiplatform
 kermit = "2.0.2"
-koin = "3.6.0-wasm-alpha2"
-kmpViewModel = "1.0.0-ALPHA-20"
+koin = "3.6.0-Beta2"
+kmpViewModel = "1.0.0-ALPHA-20-kotlin-2.0.0-RC1"
 kmpSettings = "1.1.1"
 kmpConstraintlayout = "0.3.0-rc02"
-nativecoroutines = "1.0.0-ALPHA-27"
+nativecoroutines = "1.0.0-ALPHA-28-kotlin-2.0.0-RC1"
 
 [plugins]
 

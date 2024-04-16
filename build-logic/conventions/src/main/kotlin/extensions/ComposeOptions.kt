@@ -1,5 +1,3 @@
-@file:Suppress("UnstableApiUsage")
-
 package extensions
 
 import com.android.build.api.dsl.ApplicationExtension

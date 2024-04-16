@@ -1,5 +1,3 @@
-@file:Suppress("UnstableApiUsage", "unused")
-
 import com.android.build.gradle.internal.dsl.BaseAppModuleExtension
 import extensions.addComposeDependencies
 import extensions.addComposeOptions

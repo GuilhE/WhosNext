@@ -1,5 +1,3 @@
-@file:Suppress("UnstableApiUsage", "unused")
-
 import com.android.build.gradle.LibraryExtension
 import extensions.addKotlinAndroidConfigurations
 import org.gradle.api.Plugin

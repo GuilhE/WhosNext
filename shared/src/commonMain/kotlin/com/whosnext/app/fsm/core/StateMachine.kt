@@ -240,11 +240,9 @@ internal class StateMachine<STATE : Any, EVENT : Any, SIDE_EFFECT : Any> private
 
             fun build() = stateDefinition
 
-            @Suppress("unused") // The unused warning is probably a compiler bug.
             fun S.transitionTo(state: STATE, sideEffect: SIDE_EFFECT? = null) =
                 Graph.State.TransitionTo(state, sideEffect)
 
-            @Suppress("unused") // The unused warning is probably a compiler bug.
             fun S.dontTransition(sideEffect: SIDE_EFFECT? = null) = transitionTo(this, sideEffect)
         }
     }

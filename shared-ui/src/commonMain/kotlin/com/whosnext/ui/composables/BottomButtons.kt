@@ -1,5 +1,3 @@
-@file:Suppress("unused", "SpellCheckingInspection")
-
 package com.whosnext.ui.composables
 
 import androidx.compose.foundation.Image

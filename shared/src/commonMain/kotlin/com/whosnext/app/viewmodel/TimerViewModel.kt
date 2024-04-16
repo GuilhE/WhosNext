@@ -16,7 +16,7 @@ import kotlinx.coroutines.launch
  */
 class TimerViewModel(stateRestoreEnabled: Boolean = true) : KMMViewModel() {
 
-    private val _uiState = MutableStateFlow(viewModelScope, TimerUiState())
+    private val _uiState = MutableStateFlow(viewModelScope, TimerUiState().settingTimer())
     private val savedStateContainer: TimerSavedStateContainer? =
         if (stateRestoreEnabled) {
             viewModelScope.coroutineScope.savedStateContainer(_uiState) { state ->
