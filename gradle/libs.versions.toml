@@ -6,7 +6,7 @@ androidMinSdk = "24"
 
 #======Gradle
 gradleAndroidTools = "8.3.2"
-gradleComposeMultiplatform = "1.6.2"
+gradleComposeMultiplatform = "1.6.10-beta01"
 
 #======Kotlin
 kotlin = "2.0.0-RC1"
