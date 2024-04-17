@@ -26,6 +26,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.CanvasBasedWindow
 import com.whosnext.app.DependencyInjection
 import com.whosnext.app.ViewModels
+import com.whosnext.ui.screens.TimerScreen
 
 @OptIn(ExperimentalComposeUiApi::class)
 fun main() {
@@ -60,7 +61,7 @@ fun main() {
                     with(viewModel.uiState.collectAsState().value) {
                         Box {
                             var notifying: Boolean by rememberSaveable { mutableStateOf(false) }
-                            TimerScreenWasm(
+                            TimerScreen(
                                 progress = progress,
                                 elapsed = elapsedLabel(),
                                 value = value,

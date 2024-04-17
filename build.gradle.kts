@@ -6,6 +6,7 @@ buildscript {
     repositories {
         google()
         mavenCentral()
+        maven("https://plugins.gradle.org/m2/")
     }
     dependencies {
         classpath(libs.gradle.android.tools)

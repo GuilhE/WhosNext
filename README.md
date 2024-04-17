@@ -50,9 +50,7 @@ To run `iosApp` open `iosApp/iosApp.xcodeproj` in Xcode and run standard configu
 
 #### browserApp
 
-`./gradlew :shared-ui:wasmJsBrowserDevelopmentRun`  
-
-**Note:** due to current limitations in Compose Multiplatform, resources in multimodule projects are not supported yet. As a result, the `browserApp` implementation is located within the `wasmJsMain` of the `shared-ui` module.
+`./gradlew :browserApp:wasmJsBrowserDevelopmentRun`  
 
 ## UI
 
