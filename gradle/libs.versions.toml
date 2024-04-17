@@ -12,7 +12,7 @@ gradleComposeMultiplatform = "1.6.2"
 kotlin = "2.0.0-RC1"
 kotlinxCoroutines = "1.8.0"
 kotlinxSerialization = "1.6.3"
-kotlinxAtomicFu = "0.23.2"
+kotlinxAtomicFu = "0.24.0"
 ksp = "2.0.0-RC1-1.0.20"
 
 #======Compose Multiplatform
@@ -24,10 +24,10 @@ composeMultiplatformCompiler = "1.5.11-kt-2.0.0-RC1"
 #https://developer.android.com/jetpack/androidx/releases/compose-kotlin?hl=pt-br#pre-release_kotlin_compatibility
 #https://androidx.dev/storage/compose-compiler/repository
 androidxCompose = "1.6.5"
-androidxComposeCompiler = "1.5.11"
+androidxComposeCompiler = "1.5.13-dev-k2.0.0-RC1-50f08dfa4b4"
 androidxComposeLifecycle = "2.7.0"
 androidxComposeMaterial3 = "1.2.1"
-androidxUiUtilAndroid = "1.6.5"
+androidxComposeUiUtilAndroid = "1.6.5"
 
 #======Android
 androidxActivityKtx = "1.8.2"
@@ -37,10 +37,10 @@ androidMaterial = "1.11.0"
 #======Multiplatform
 kermit = "2.0.2"
 koin = "3.6.0-Beta2"
+nativecoroutines = "1.0.0-ALPHA-28-kotlin-2.0.0-RC1"
 kmpViewModel = "1.0.0-ALPHA-20-kotlin-2.0.0-RC1"
 kmpSettings = "1.1.1"
 kmpConstraintlayout = "0.3.0-rc02"
-nativecoroutines = "1.0.0-ALPHA-28-kotlin-2.0.0-RC1"
 
 [plugins]
 
@@ -86,7 +86,7 @@ androidx-compose-ui-graphics = { group = "androidx.compose.ui", name = "ui-graph
 androidx-compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling", version.ref = "androidxCompose" }
 androidx-compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview", version.ref = "androidxCompose" }
 androidx-compose-ui-util = { group = "androidx.compose.ui", name = "ui-util", version.ref = "androidxCompose" }
-androidx-compose-ui-util-android = { group = "androidx.compose.ui", name = "ui-util-android", version.ref = "androidxUiUtilAndroid" }
+androidx-compose-ui-util-android = { group = "androidx.compose.ui", name = "ui-util-android", version.ref = "androidxComposeUiUtilAndroid" }
 
 [bundles]
 
