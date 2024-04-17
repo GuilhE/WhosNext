@@ -1,9 +1,7 @@
 @file:Suppress("OPT_IN_USAGE")
 
 import com.android.build.gradle.internal.dsl.BaseAppModuleExtension
-import org.jetbrains.compose.ComposeExtension
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
-import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension
 import org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalWasmDsl
 
 plugins {
@@ -16,7 +14,6 @@ plugins {
 
 compose {
     kotlinCompilerPlugin.set(libs.versions.composeMultiplatformCompiler)
-    applyTemporaryWasmSettings()    //TODO: remove when compose.components.resources support multi-module
 }
 
 android {
@@ -32,7 +29,6 @@ kotlin {
         }
     }
     jvm("desktop")
-    applyTemporaryWasmSettings()    //TODO: remove when compose.components.resources support multi module
     @OptIn(ExperimentalWasmDsl::class)
     wasmJs { browser() }
     listOf(iosArm64(), iosSimulatorArm64(), iosX64()).forEach { target ->
@@ -65,7 +61,7 @@ kotlin {
 //TODO:
 //  Multi-module projects are not fully supported yet when using compose.components.resources.
 //  https://www.jetbrains.com/help/kotlin-multiplatform-dev/compose-images-resources.html
-//  When they do, we can remove the following functions and use the [browserApp] and [androidApp] modules
+//  When they do, we can remove the following functions and use the [androidApp] module
 
 fun BaseAppModuleExtension.applyTemporaryAndroidSettings() {
     namespace = "com.whosnext.app"
@@ -125,31 +121,5 @@ fun BaseAppModuleExtension.applyTemporaryAndroidSettings() {
         implementation(libs.android.material)
         implementation(libs.androidx.compose.activity)
         implementation(libs.androidx.compose.ui.tooling.preview)
-    }
-}
-
-fun KotlinMultiplatformExtension.applyTemporaryWasmSettings() {
-    @OptIn(ExperimentalWasmDsl::class)
-    wasmJs {
-        moduleName = "browserApp"
-        browser {
-            commonWebpackConfig {
-                outputFileName = "browserApp.js"
-            }
-        }
-        binaries.executable()
-    }
-    sourceSets {
-        val wasmJsMain by getting {
-            dependencies {
-                implementation(projects.shared)
-            }
-        }
-    }
-}
-
-fun ComposeExtension.applyTemporaryWasmSettings() {
-    experimental {
-        web.application { }
     }
 }
