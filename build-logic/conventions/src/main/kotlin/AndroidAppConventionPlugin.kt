@@ -56,6 +56,7 @@ class AndroidAppConventionPlugin : Plugin<Project> {
                 abortOnError = false
             }
 
+            @Suppress("UnstableApiUsage")
             testOptions {
                 unitTests.apply {
                     isReturnDefaultValues = true
@@ -72,7 +73,7 @@ class AndroidAppConventionPlugin : Plugin<Project> {
                             "**/*.kotlin_module",
                             "**/*.version",
                             "**/*.txt",
-                            "**/*.xml",
+//                            "**/*.xml",  //if not commented it will delete all shared-ui resources
                             "**/*.properties",
                             "/META-INF/{AL2.0,LGPL2.1}"
                         )

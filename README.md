@@ -38,11 +38,9 @@ Supports: `jvm` (android and desktop), `native` (iOS) and `wasm` (web)
 - Android uses Compose Multiplatform
 - iOS uses SwiftUI and Compose Multiplatform
 
-`./gradlew :shared-ui:main:installDebug`  
+`./gradlew :androidApp:installDebug`  
 
-**Note:** due to current limitations in Compose Multiplatform, resources in multimodule projects are not fully supported yet. As a result, the `androidApp` implementation is located within the `androidMain` of the `shared-ui` module.
-
-To run `iosApp` open `iosApp/iosApp.xcodeproj` in Xcode and run standard configuration or use [KMM plugin](https://plugins.jetbrains.com/plugin/14936-kotlin-multiplatform-mobile) for Android Studio and choose `iosApp` in `run configurations`.
+To run the iosApp open `iosApp/iosApp.xcodeproj` in Xcode and run standard configuration or use [KMM plugin](https://plugins.jetbrains.com/plugin/14936-kotlin-multiplatform-mobile) for Android Studio and choose `iosApp` in `run configurations`.
 
 #### desktopApp
 

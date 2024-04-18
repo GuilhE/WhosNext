@@ -1,5 +1,3 @@
-@file:Suppress("OPT_IN_USAGE")
-
 import org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalWasmDsl
 
 plugins {
@@ -45,6 +43,7 @@ kotlin {
         }
         androidMain.dependencies { implementation(libs.koin.android) }
         iosMain {
+            @Suppress("OPT_IN_USAGE")
             compilerOptions {
                 freeCompilerArgs.add("-Xexport-kdoc")
             }
@@ -52,6 +51,6 @@ kotlin {
     }
 }
 
-tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinJvmCompile>().configureEach {
-    jvmTargetValidationMode.set(org.jetbrains.kotlin.gradle.dsl.jvm.JvmTargetValidationMode.IGNORE)
-}
+//tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinJvmCompile>().configureEach {
+//    jvmTargetValidationMode.set(org.jetbrains.kotlin.gradle.dsl.jvm.JvmTargetValidationMode.IGNORE)
+//}
