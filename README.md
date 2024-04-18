@@ -35,6 +35,7 @@ Supports: `jvm` (android and desktop), `native` (iOS) and `wasm` (web)
 
 - Components
 - Screens
+- Themes
 - Resources
 
 #### androidApp
