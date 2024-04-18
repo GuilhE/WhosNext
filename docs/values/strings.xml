@@ -1,6 +1,0 @@
-<resources>
-    <string name="lbl_sep">:</string>
-    <string name="lbl_minutes">Minutes</string>
-    <string name="lbl_seconds">Seconds</string>
-    <string name="lbl_start">Click anywhere to start</string>
-</resources>
