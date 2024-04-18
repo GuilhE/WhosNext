@@ -20,12 +20,16 @@ Supports: `jvm` (android and desktop), `native` (iOS) and `wasm` (web)
 
 #### shared
 
-- Model-View-Intent architecture with state emission by Kotlin Flow
+- UDF architecture implemented with Model-View-Intent
 - Finite State Machine to validate state transitions
+- State emission by Kotlin Flow
 - State restoration (both for UI State and FSM State)
 - ViewModel shared by [KMM-ViewModel](https://github.com/rickclephas/KMM-ViewModel)
 
-<img src="/media/fsm.png" alt="fsm" width="412"/> <img src="/media/wn.png" alt="wn" width="200"/> <img src="/media/wnp.png" alt="wnp" width="200"/>
+<p>
+  </br>
+  <img src="/media/fsm.png" alt="fsm" width="412"/> <img src="/media/wn.png" alt="wn" width="200"/> <img src="/media/wnp.png" alt="wnp" width="200"/>
+</p>
 
 #### shared-ui
 
@@ -33,20 +37,27 @@ Supports: `jvm` (android and desktop), `native` (iOS) and `wasm` (web)
 - Screens
 - Resources
 
-#### androidApp + iosApp
+#### androidApp
 
-- Android uses Compose Multiplatform
-- iOS uses SwiftUI and Compose Multiplatform
+- Uses Compose Multiplatform
 
 `./gradlew :androidApp:installDebug`  
 
-To run the iosApp open `iosApp/iosApp.xcodeproj` in Xcode and run standard configuration or use [KMM plugin](https://plugins.jetbrains.com/plugin/14936-kotlin-multiplatform-mobile) for Android Studio and choose `iosApp` in `run configurations`.
+#### iosApp
+
+- Uses SwiftUI and Compose Multiplatform
+ 
+To run it open `iosApp/iosApp.xcodeproj` in Xcode and run standard configuration or use [KMM plugin](https://plugins.jetbrains.com/plugin/14936-kotlin-multiplatform-mobile) for Android Studio and choose `iosApp` in `run configurations`.
 
 #### desktopApp
+
+- Uses Compose Multiplatform
 
 `./gradlew :desktopApp:run`
 
 #### browserApp
+
+- Uses Compose Multiplatform
 
 `./gradlew :browserApp:wasmJsBrowserDevelopmentRun`  
 
