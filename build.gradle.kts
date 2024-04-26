@@ -1,6 +1,4 @@
 import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension
-import org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootExtension
-import org.jetbrains.kotlin.gradle.targets.js.npm.tasks.KotlinNpmInstallTask
 
 buildscript {
     repositories {
@@ -29,13 +27,4 @@ allprojects {
             }
         }
     }
-}
-
-// TODO: Remove once default NodeJS version supports wasm
-rootProject.extensions.findByType<NodeJsRootExtension>()?.apply {
-    version = "v22.0.0-v8-canary20240219209428711c"
-    downloadBaseUrl = "https://nodejs.org/download/v8-canary"
-}
-tasks.withType<KotlinNpmInstallTask>().configureEach {
-    args.add("--ignore-engines")
 }

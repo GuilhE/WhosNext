@@ -1,12 +1,10 @@
-import org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalWasmDsl
-
 plugins {
     kotlin("multiplatform")
     id("org.jetbrains.compose")
 }
 
+@OptIn(org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalWasmDsl::class)
 kotlin {
-    @OptIn(ExperimentalWasmDsl::class)
     wasmJs {
         moduleName = "browserApp"
         browser {
@@ -33,4 +31,8 @@ kotlin {
 
 compose.experimental {
     web.application { }
+}
+
+rootProject.extensions.findByType<org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootExtension>()?.apply {
+    version = "22.0.0"
 }

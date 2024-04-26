@@ -1,5 +1,3 @@
-import org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalWasmDsl
-
 plugins {
     id("buildlogic.plugins.kmp.library.android")
     id("kotlinx-serialization")
@@ -12,7 +10,7 @@ android {
     namespace = "com.whosnext.shared"
 }
 
-@OptIn(ExperimentalWasmDsl::class)
+@OptIn(org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalWasmDsl::class)
 kotlin {
     androidTarget()
     jvm()

@@ -1,5 +1,3 @@
-import org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalWasmDsl
-
 plugins {
     id("buildlogic.plugins.kmp.library.android")
     id("org.jetbrains.compose")
@@ -13,9 +11,9 @@ android {
     namespace = "com.whosnext.ui"
 }
 
+@OptIn(org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalWasmDsl::class)
 kotlin {
     jvm("desktop")
-    @OptIn(ExperimentalWasmDsl::class)
     wasmJs { browser() }
     listOf(iosArm64(), iosSimulatorArm64(), iosX64()).forEach { target ->
         target.binaries.framework { baseName = "WhosNextComposables" }
