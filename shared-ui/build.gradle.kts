@@ -20,19 +20,16 @@ kotlin {
     }
 
     sourceSets {
-        val commonMain by getting {
-            dependencies {
-                implementation(compose.runtime)
-                implementation(compose.foundation)
-                implementation(compose.material3)
-                implementation(compose.ui)
-                implementation(compose.components.resources)
-            }
+        commonMain.dependencies {
+            implementation(compose.runtime)
+            implementation(compose.foundation)
+            implementation(compose.material3)
+            implementation(compose.ui)
+            implementation(compose.components.resources)
         }
-
-        val desktopMain by getting
-        desktopMain.dependencies { implementation(compose.preview) }
-
+        val desktopMain by getting {
+            dependencies { implementation(compose.preview) }
+        }
         iosMain {
             dependencies { implementation(projects.shared) }
             @Suppress("OPT_IN_USAGE")

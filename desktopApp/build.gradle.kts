@@ -7,7 +7,6 @@ plugins {
 
 compose {
     kotlinCompilerPlugin.set(libs.versions.composeMultiplatformCompiler)
-
     desktop {
         application {
             mainClass = "WhosNextKt"
@@ -35,13 +34,14 @@ compose {
 kotlin {
     jvm("desktop")
     sourceSets {
-        val desktopMain by getting
-        desktopMain.dependencies {
-            implementation(projects.shared)
-            implementation(projects.sharedUi)
-            implementation(compose.material3)
-            implementation(compose.desktop.currentOs)
-            implementation(libs.jetbrains.kotlinx.coroutines.swing)
+        val desktopMain by getting {
+            dependencies {
+                implementation(projects.shared)
+                implementation(projects.sharedUi)
+                implementation(compose.material3)
+                implementation(compose.desktop.currentOs)
+                implementation(libs.jetbrains.kotlinx.coroutines.swing)
+            }
         }
     }
 }
