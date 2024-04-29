@@ -28,14 +28,12 @@ import androidx.compose.ui.unit.DpSize
 import androidx.compose.ui.unit.dp
 import com.whosnext.ui.screens.SplashScreen
 import com.whosnext.ui.theme.SplashTheme
-import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 import whosnext.shared_ui.generated.resources.Res
 import whosnext.shared_ui.generated.resources.bg_texture
 import whosnext.shared_ui.generated.resources.lbl_start
 
-@OptIn(ExperimentalResourceApi::class)
 @Composable
 fun SplashScreenWasm(onStart: () -> Unit) {
     SplashTheme {

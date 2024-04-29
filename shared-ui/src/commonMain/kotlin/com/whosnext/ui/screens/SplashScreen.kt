@@ -11,14 +11,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.layout.ContentScale
 import com.whosnext.ui.theme.SplashTheme
-import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.painterResource
 import whosnext.shared_ui.generated.resources.Res
 import whosnext.shared_ui.generated.resources.bg_texture
 import whosnext.shared_ui.generated.resources.ic_logo
 import whosnext.shared_ui.generated.resources.ic_zone
 
-@OptIn(ExperimentalResourceApi::class)
 @Composable
 fun SplashScreen(modifier: Modifier = Modifier) {
     SplashTheme {

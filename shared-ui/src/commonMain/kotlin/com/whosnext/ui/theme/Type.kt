@@ -4,18 +4,15 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Typography
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.text.font.FontFamily
-import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.Font
 import whosnext.shared_ui.generated.resources.Res
 import whosnext.shared_ui.generated.resources.helvetica_neue_light
 import whosnext.shared_ui.generated.resources.whosnext_light_italic
 
-@OptIn(ExperimentalResourceApi::class)
 private val helveticaNeueFontFamily
     @Composable
     get() = FontFamily(Font(Res.font.helvetica_neue_light))
 
-@OptIn(ExperimentalResourceApi::class)
 private val whosNextFontFamily
     @Composable
     get() = FontFamily(Font(Res.font.whosnext_light_italic))

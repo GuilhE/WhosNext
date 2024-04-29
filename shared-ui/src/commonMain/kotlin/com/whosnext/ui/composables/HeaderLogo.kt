@@ -16,13 +16,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.unit.dp
-import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.painterResource
 import whosnext.shared_ui.generated.resources.Res
 import whosnext.shared_ui.generated.resources.ic_chrono_ball
 import whosnext.shared_ui.generated.resources.ic_logo_alt
 
-@OptIn(ExperimentalResourceApi::class)
 @Composable
 internal fun HeaderLogo(
     modifier: Modifier,

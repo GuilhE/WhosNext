@@ -36,12 +36,10 @@ import com.whosnext.ui.theme.OrangeTheme
 import com.whosnext.ui.theme.PinkTheme
 import com.whosnext.ui.theme.PurpleTheme
 import com.whosnext.ui.theme.YellowTheme
-import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.painterResource
 import whosnext.shared_ui.generated.resources.Res
 import whosnext.shared_ui.generated.resources.bg_texture
 
-@OptIn(ExperimentalResourceApi::class)
 @Composable
 fun TimerScreen(
     progress: Float,

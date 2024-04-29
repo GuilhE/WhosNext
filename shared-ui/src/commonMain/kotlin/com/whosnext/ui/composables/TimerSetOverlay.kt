@@ -25,7 +25,6 @@ import androidx.compose.ui.unit.dp
 import com.whosnext.ui.padTime
 import com.whosnext.ui.theme.DigitsTheme
 import com.whosnext.ui.theme.OverlayTheme
-import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 import whosnext.shared_ui.generated.resources.Res
@@ -35,7 +34,6 @@ import whosnext.shared_ui.generated.resources.lbl_minutes
 import whosnext.shared_ui.generated.resources.lbl_seconds
 import whosnext.shared_ui.generated.resources.lbl_sep
 
-@OptIn(ExperimentalResourceApi::class)
 @Composable
 fun TimerSetOverlay(
     modifier: Modifier,

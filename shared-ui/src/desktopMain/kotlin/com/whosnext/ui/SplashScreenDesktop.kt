@@ -26,7 +26,6 @@ import androidx.compose.ui.unit.dp
 import com.whosnext.ui.theme.SplashTheme
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.painterResource
 import whosnext.shared_ui.generated.resources.Res
 import whosnext.shared_ui.generated.resources.bg_texture
@@ -54,7 +53,6 @@ private val EaseOutBounce: Easing = Easing { fraction ->
 
 private data class ChronoMetadata(val x: Float, val y: Float, val z: Float, val size: Float)
 
-@OptIn(ExperimentalResourceApi::class)
 @Composable
 fun SplashScreenDesktop(modifier: Modifier = Modifier, onReady: () -> Unit) {
     var metadata by remember { mutableStateOf(ChronoMetadata(x = 45f, -38f, 0f, 70f)) }

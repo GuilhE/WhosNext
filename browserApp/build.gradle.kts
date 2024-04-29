@@ -34,6 +34,4 @@ compose.experimental {
     web.application { }
 }
 
-rootProject.extensions.findByType<org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootExtension>()?.apply {
-    version = "22.0.0"
-}
+rootProject.the<org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootExtension>().download = false
