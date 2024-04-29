@@ -1,6 +1,5 @@
 plugins {
-    kotlin("multiplatform")
-    id("org.jetbrains.compose")
+    id("buildlogic.plugins.kmp.compose")
 }
 
 @OptIn(org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalWasmDsl::class)

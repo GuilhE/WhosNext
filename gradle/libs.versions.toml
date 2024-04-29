@@ -6,25 +6,17 @@ androidMinSdk = "24"
 
 #======Gradle
 gradleAndroidTools = "8.3.2"
-gradleComposeMultiplatform = "1.6.10-beta02"
 
 #======Kotlin
-kotlin = "2.0.0-RC1"
+kotlin = "2.0.0-RC2"
 kotlinxCoroutines = "1.8.0"
 kotlinxSerialization = "1.6.3"
 kotlinxAtomicFu = "0.24.0"
 ksp = "2.0.0-RC1-1.0.20"
-
-#======Compose Multiplatform
-#https://www.jetbrains.com/help/kotlin-multiplatform-dev/compose-compatibility-and-versioning.html
-#https://maven.pkg.jetbrains.space/public/p/compose/dev/org/jetbrains/compose/compiler/compiler/
-composeMultiplatformCompiler = "1.5.11-kt-2.0.0-RC1"
+composeMultiplatform = "1.6.10-beta03"
 
 #======Jetpack Compose
-#https://developer.android.com/jetpack/androidx/releases/compose-kotlin?hl=pt-br#pre-release_kotlin_compatibility
-#https://androidx.dev/storage/compose-compiler/repository
 androidxCompose = "1.6.6"
-androidxComposeCompiler = "1.5.13-dev-k2.0.0-RC1-50f08dfa4b4"
 androidxComposeLifecycle = "2.7.0"
 androidxComposeMaterial3 = "1.2.1"
 androidxComposeUiUtilAndroid = "1.6.6"
@@ -44,16 +36,17 @@ kmpConstraintlayout = "0.3.0-rc02"
 
 [plugins]
 
+jetbrainsCompose = { id = "org.jetbrains.compose", version.ref = "composeMultiplatform" }
+jetbrainsComposeCompiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 nativecoroutines = { id = "com.rickclephas.kmp.nativecoroutines", version.ref = "nativecoroutines" }
 
 [libraries]
 
 #======Gradle
+gradle-android-tools = { group = "com.android.tools.build", name = "gradle", version.ref = "gradleAndroidTools" }
 gradle-kotlin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
 gradle-kotlin-serialization = { group = "org.jetbrains.kotlin", name = "kotlin-serialization", version.ref = "kotlin" }
-gradle-android-tools = { group = "com.android.tools.build", name = "gradle", version.ref = "gradleAndroidTools" }
-gradle-compose-multiplatform = { group = "org.jetbrains.compose", name = "compose-gradle-plugin", version.ref = "gradleComposeMultiplatform" }
 
 #======Jetbrains
 jetbrains-kotlinx-serialization = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinxSerialization" }

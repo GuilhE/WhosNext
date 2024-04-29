@@ -1,10 +1,6 @@
 plugins {
     id("buildlogic.plugins.kmp.library.android")
-    id("org.jetbrains.compose")
-}
-
-compose {
-    kotlinCompilerPlugin.set(libs.versions.composeMultiplatformCompiler)
+    id("buildlogic.plugins.kmp.compose")
 }
 
 android {

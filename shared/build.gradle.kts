@@ -1,7 +1,6 @@
 plugins {
     id("buildlogic.plugins.kmp.library.android")
     id("kotlinx-serialization")
-    id("kotlin-parcelize")
     alias(libs.plugins.ksp)
     alias(libs.plugins.nativecoroutines)
 }

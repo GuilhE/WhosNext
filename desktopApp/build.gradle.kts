@@ -1,12 +1,10 @@
 import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 
 plugins {
-    kotlin("multiplatform")
-    id("org.jetbrains.compose")
+    id("buildlogic.plugins.kmp.compose")
 }
 
 compose {
-    kotlinCompilerPlugin.set(libs.versions.composeMultiplatformCompiler)
     desktop {
         application {
             mainClass = "WhosNextKt"

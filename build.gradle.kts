@@ -4,14 +4,17 @@ buildscript {
     repositories {
         google()
         mavenCentral()
-        maven("https://plugins.gradle.org/m2/")
     }
     dependencies {
         classpath(libs.gradle.android.tools)
         classpath(libs.gradle.kotlin)
         classpath(libs.gradle.kotlin.serialization)
-        classpath(libs.gradle.compose.multiplatform)
     }
+}
+
+plugins {
+    alias(libs.plugins.jetbrainsCompose) apply false
+    alias(libs.plugins.jetbrainsComposeCompiler) apply false
 }
 
 allprojects {
