@@ -1,30 +1,27 @@
 [versions]
 
-androidCompileSdk = "34"
-androidTargetSdk = "34"
-androidMinSdk = "24"
-
-#======Gradle
-gradleAndroidTools = "8.3.2"
-
 #======Kotlin
 kotlin = "2.0.0-RC2"
 kotlinxCoroutines = "1.8.0"
 kotlinxSerialization = "1.6.3"
 kotlinxAtomicFu = "0.24.0"
-ksp = "2.0.0-RC2-1.0.20"
-compose = "1.6.10-beta03"
+kotlinxCompose = "1.6.10-beta03"
 
-#======Jetpack Compose
+#=====Google
+ksp = "2.0.0-RC2-1.0.20"
+
+#======Android
+androidCompileSdk = "34"
+androidTargetSdk = "34"
+androidMinSdk = "24"
+androidGradlePlugin = "8.3.2"
+androidMaterial = "1.11.0"
+androidxActivityKtx = "1.9.0"
+androidxLifecycle = "2.7.0"
 androidxCompose = "1.6.6"
 androidxComposeLifecycle = "2.7.0"
 androidxComposeMaterial3 = "1.2.1"
 androidxComposeUiUtilAndroid = "1.6.6"
-
-#======Android
-androidxActivityKtx = "1.9.0"
-androidxLifecycle = "2.7.0"
-androidMaterial = "1.11.0"
 
 #======Multiplatform
 kermit = "2.0.2"
@@ -35,29 +32,30 @@ kmpSettings = "1.1.1"
 kmpConstraintlayout = "0.3.1"
 
 [plugins]
-
-jetbrainsCompose = { id = "org.jetbrains.compose", version.ref = "compose" }
-jetbrainsComposeCompiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
+android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
+kotlinx-compose = { id = "org.jetbrains.compose", version.ref = "kotlinxCompose" }
+kotlinx-compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+kotlinx-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+google-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 nativecoroutines = { id = "com.rickclephas.kmp.nativecoroutines", version.ref = "nativecoroutines" }
 
 [libraries]
 
 #======Gradle
-gradle-android-tools = { group = "com.android.tools.build", name = "gradle", version.ref = "gradleAndroidTools" }
+gradle-android-tools = { group = "com.android.tools.build", name = "gradle", version.ref = "androidGradlePlugin" }
 gradle-kotlin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
-gradle-kotlin-serialization = { group = "org.jetbrains.kotlin", name = "kotlin-serialization", version.ref = "kotlin" }
 
 #======Jetbrains
-jetbrains-kotlinx-serialization = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinxSerialization" }
-jetbrains-kotlinx-atomicfu = { group = "org.jetbrains.kotlinx", name = "atomicfu", version.ref = "kotlinxAtomicFu" }
-jetbrains-kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "kotlinxCoroutines" }
-jetbrains-kotlinx-coroutines-swing = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-swing", version.ref = "kotlinxCoroutines" }
+kotlinx-serialization = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinxSerialization" }
+kotlinx-atomicfu = { group = "org.jetbrains.kotlinx", name = "atomicfu", version.ref = "kotlinxAtomicFu" }
+kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "kotlinxCoroutines" }
+kotlinx-coroutines-swing = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-swing", version.ref = "kotlinxCoroutines" }
 
 #======Multiplatform
-kermit = { group = "co.touchlab", name = "kermit", version.ref = "kermit" }
-koin-core = { group = "io.insert-koin", name = "koin-core", version.ref = "koin" }
-koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koin" }
+kmp-kermit = { group = "co.touchlab", name = "kermit", version.ref = "kermit" }
+kmp-koin-core = { group = "io.insert-koin", name = "koin-core", version.ref = "koin" }
+kmp-koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koin" }
 kmp-settings = { group = "com.russhwolf", name = "multiplatform-settings", version.ref = "kmpSettings" }
 kmp-constraintlayout = { group = "tech.annexflow.compose", name = "constraintlayout-compose-multiplatform", version.ref = "kmpConstraintlayout" }
 kmp-viewmodel = { group = "com.rickclephas.kmm", name = "kmm-viewmodel-core", version.ref = "kmpViewModel" }

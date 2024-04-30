@@ -38,7 +38,7 @@ kotlin {
                 implementation(projects.sharedUi)
                 implementation(compose.material3)
                 implementation(compose.desktop.currentOs)
-                implementation(libs.jetbrains.kotlinx.coroutines.swing)
+                implementation(libs.kotlinx.coroutines.swing)
             }
         }
     }

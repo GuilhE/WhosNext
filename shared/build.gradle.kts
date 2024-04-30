@@ -1,7 +1,7 @@
 plugins {
     id("buildlogic.plugins.kmp.library.android")
-    id("kotlinx-serialization")
-    alias(libs.plugins.ksp)
+    alias(libs.plugins.kotlinx.serialization)
+    alias(libs.plugins.google.ksp)
     alias(libs.plugins.nativecoroutines)
 }
 
@@ -30,15 +30,15 @@ kotlin {
             }
         }
         commonMain.dependencies {
-            implementation(libs.jetbrains.kotlinx.coroutines.core)
-            implementation(libs.jetbrains.kotlinx.serialization)
-            implementation(libs.jetbrains.kotlinx.atomicfu)
+            implementation(libs.kotlinx.coroutines.core)
+            implementation(libs.kotlinx.serialization)
+            implementation(libs.kotlinx.atomicfu)
             implementation(libs.kmp.settings)
             api(libs.kmp.viewmodel)
-            api(libs.koin.core)
-            api(libs.kermit)
+            api(libs.kmp.koin.core)
+            api(libs.kmp.kermit)
         }
-        androidMain.dependencies { implementation(libs.koin.android) }
+        androidMain.dependencies { implementation(libs.kmp.koin.android) }
         iosMain {
             @Suppress("OPT_IN_USAGE")
             compilerOptions {
