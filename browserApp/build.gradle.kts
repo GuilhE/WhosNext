@@ -32,5 +32,3 @@ kotlin {
 compose.experimental {
     web.application { }
 }
-
-rootProject.the<org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootExtension>().download = false

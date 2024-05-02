@@ -18,16 +18,16 @@ androidGradlePlugin = "8.3.2"
 androidMaterial = "1.11.0"
 androidxActivityKtx = "1.9.0"
 androidxLifecycle = "2.7.0"
-androidxCompose = "1.6.6"
+androidxCompose = "1.6.7"
 androidxComposeLifecycle = "2.7.0"
 androidxComposeMaterial3 = "1.2.1"
-androidxComposeUiUtilAndroid = "1.6.6"
+androidxComposeUiUtilAndroid = "1.6.7"
 
 #======Multiplatform
 kermit = "2.0.2"
 koin = "3.6.0-Beta2"
-nativecoroutines = "1.0.0-ALPHA-28-kotlin-2.0.0-RC1"
-kmpViewModel = "1.0.0-ALPHA-20-kotlin-2.0.0-RC1"
+nativecoroutines = "1.0.0-ALPHA-28-kotlin-2.0.0-RC2"
+kmpViewModel = "1.0.0-ALPHA-20-kotlin-2.0.0-RC2"
 kmpSettings = "1.1.1"
 kmpConstraintlayout = "0.3.1"
 
@@ -57,8 +57,8 @@ kmp-kermit = { group = "co.touchlab", name = "kermit", version.ref = "kermit" }
 kmp-koin-core = { group = "io.insert-koin", name = "koin-core", version.ref = "koin" }
 kmp-koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koin" }
 kmp-settings = { group = "com.russhwolf", name = "multiplatform-settings", version.ref = "kmpSettings" }
-kmp-constraintlayout = { group = "tech.annexflow.compose", name = "constraintlayout-compose-multiplatform", version.ref = "kmpConstraintlayout" }
 kmp-viewmodel = { group = "com.rickclephas.kmm", name = "kmm-viewmodel-core", version.ref = "kmpViewModel" }
+kmp-constraintlayout = { group = "tech.annexflow.compose", name = "constraintlayout-compose-multiplatform", version.ref = "kmpConstraintlayout" }
 
 #======Android
 android-material = { group = "com.google.android.material", name = "material", version.ref = "androidMaterial" }
