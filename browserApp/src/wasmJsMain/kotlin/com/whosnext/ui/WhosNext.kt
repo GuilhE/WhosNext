@@ -24,6 +24,7 @@ import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.unit.DpSize
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.CanvasBasedWindow
+import co.touchlab.kermit.Logger
 import com.whosnext.app.DependencyInjection
 import com.whosnext.app.ViewModels
 import com.whosnext.ui.screens.TimerScreen
@@ -33,7 +34,7 @@ fun main() {
     CanvasBasedWindow(canvasElementId = "WhosNext") {
         val viewModel = remember {
             DependencyInjection.initKoin()
-            ViewModels.timerViewModel()
+            ViewModels.timerViewModel().also { Logger.d("Wasm\tobject ${it.toJsReference()}") }
         }
         var showSplash by remember { mutableStateOf(true) }
         var showTimer by remember { mutableStateOf(false) }

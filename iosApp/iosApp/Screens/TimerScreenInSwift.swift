@@ -33,7 +33,9 @@ struct TimerScreenInSwift: View {
             onStop: { viewModel.stop() },
             onSettingTime: { viewModel.settingTime() },
             onSetTime: { time in viewModel.setTime(seconds: time) }
-        )
+        ).onAppear() {
+            print("Swift\tobject \(Unmanaged.passUnretained(viewModel).toOpaque())")
+        }
     }
 }
 

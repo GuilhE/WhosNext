@@ -14,6 +14,7 @@ import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.WindowPosition
 import androidx.compose.ui.window.WindowState
 import androidx.compose.ui.window.application
+import co.touchlab.kermit.Logger
 import com.whosnext.app.DependencyInjection
 import com.whosnext.app.ViewModels
 import com.whosnext.ui.SplashScreenDesktop
@@ -22,7 +23,7 @@ import com.whosnext.ui.screens.TimerScreen
 fun main() = application {
     val viewModel = remember {
         DependencyInjection.initKoin()
-        ViewModels.timerViewModel()
+        ViewModels.timerViewModel().also { Logger.d("JVM\tobject ${System.identityHashCode(it)}") }
     }
     var showSplash by remember { mutableStateOf(true) }
 
