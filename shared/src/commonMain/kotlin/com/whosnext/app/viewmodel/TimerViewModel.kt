@@ -1,9 +1,9 @@
 package com.whosnext.app.viewmodel
 
-import com.rickclephas.kmm.viewmodel.KMMViewModel
-import com.rickclephas.kmm.viewmodel.MutableStateFlow
-import com.rickclephas.kmm.viewmodel.coroutineScope
+import com.rickclephas.kmp.observableviewmodel.MutableStateFlow
+import com.rickclephas.kmp.observableviewmodel.coroutineScope
 import com.rickclephas.kmp.nativecoroutines.NativeCoroutinesState
+import com.rickclephas.kmp.observableviewmodel.ViewModel
 import com.whosnext.app.fsm.TimerState
 import com.whosnext.app.fsm.TimerStateMachine
 import kotlinx.coroutines.delay
@@ -14,7 +14,7 @@ import kotlinx.coroutines.launch
 /**
  * @param stateRestoreEnabled if true (default) will enable Ui State and FSM State restoration
  */
-class TimerViewModel(stateRestoreEnabled: Boolean = true) : KMMViewModel() {
+class TimerViewModel(stateRestoreEnabled: Boolean = true) : ViewModel() {
 
     private val _uiState = MutableStateFlow(viewModelScope, TimerUiState().settingTimer())
     private val savedStateContainer: TimerSavedStateContainer? =

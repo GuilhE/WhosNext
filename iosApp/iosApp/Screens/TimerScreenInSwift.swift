@@ -1,5 +1,5 @@
 import SwiftUI
-import KMMViewModelSwiftUI
+import KMPObservableViewModelSwiftUI
 import WhosNextShared
 import WhosNextComposables
 
