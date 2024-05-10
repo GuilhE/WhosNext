@@ -1,7 +1,7 @@
 [versions]
 
 #======Kotlin
-kotlin = "2.0.0-RC2"
+kotlin = "2.0.0-RC3"
 kotlinxCoroutines = "1.8.0"
 kotlinxSerialization = "1.6.3"
 kotlinxAtomicFu = "0.24.0"
