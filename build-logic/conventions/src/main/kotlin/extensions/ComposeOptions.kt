@@ -6,16 +6,6 @@ import org.gradle.api.artifacts.VersionCatalog
 import org.gradle.kotlin.dsl.dependencies
 import java.io.File
 
-internal fun ApplicationExtension.addComposeOptions(libs: VersionCatalog) {
-    buildFeatures {
-        compose = true
-    }
-
-    composeOptions {
-        kotlinCompilerExtensionVersion = libs.findVersion("androidxComposeCompiler").get().toString()
-    }
-}
-
 internal fun Project.addComposeDependencies(libs: VersionCatalog) {
     dependencies {
         add("implementation", libs.findBundle("androidx.compose").get())
