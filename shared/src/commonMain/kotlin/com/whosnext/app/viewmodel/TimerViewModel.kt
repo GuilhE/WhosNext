@@ -1,9 +1,9 @@
 package com.whosnext.app.viewmodel
 
-import com.rickclephas.kmp.observableviewmodel.MutableStateFlow
-import com.rickclephas.kmp.observableviewmodel.coroutineScope
 import com.rickclephas.kmp.nativecoroutines.NativeCoroutinesState
+import com.rickclephas.kmp.observableviewmodel.MutableStateFlow
 import com.rickclephas.kmp.observableviewmodel.ViewModel
+import com.rickclephas.kmp.observableviewmodel.coroutineScope
 import com.whosnext.app.fsm.TimerState
 import com.whosnext.app.fsm.TimerStateMachine
 import kotlinx.coroutines.delay
