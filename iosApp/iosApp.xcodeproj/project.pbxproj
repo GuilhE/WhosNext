@@ -26,6 +26,7 @@
 		5CCA1EA52B900C1F00538774 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCA1EA42B900C1F00538774 /* Utils.swift */; };
 		5CD4ACCD2BEEBB8B00B9CAD2 /* KMPObservableViewModelCore in Frameworks */ = {isa = PBXBuildFile; productRef = 5CD4ACCC2BEEBB8B00B9CAD2 /* KMPObservableViewModelCore */; };
 		5CD4ACCF2BEEBB8B00B9CAD2 /* KMPObservableViewModelSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 5CD4ACCE2BEEBB8B00B9CAD2 /* KMPObservableViewModelSwiftUI */; };
+		6F93DE8251303923E8C02024 /* TimerScreenInComposeUIViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957D73082C1A13E9604307D1 /* TimerScreenInComposeUIViewControllerRepresentable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		5CCA1EA42B900C1F00538774 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		7555FF7B242A565900829871 /* WhosNext.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhosNext.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		957D73082C1A13E9604307D1 /* TimerScreenInComposeUIViewControllerRepresentable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimerScreenInComposeUIViewControllerRepresentable.swift; path = SharedRepresentables/TimerScreenInComposeUIViewControllerRepresentable.swift; sourceTree = "<group>"; };
 		AB3632DC29227652001CCB65 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,6 +130,7 @@
 				7555FF7D242A565900829871 /* iosApp */,
 				7555FF7C242A565900829871 /* Products */,
 				42799AB246E5F90AF97AA0EF /* Frameworks */,
+				BEEEFBBB7480A3CCE3DC80BB /* SharedRepresentables */,
 			);
 			sourceTree = "<group>";
 		};
@@ -160,6 +163,14 @@
 				AB3632DC29227652001CCB65 /* Config.xcconfig */,
 			);
 			path = Configuration;
+			sourceTree = "<group>";
+		};
+		BEEEFBBB7480A3CCE3DC80BB /* SharedRepresentables */ = {
+			isa = PBXGroup;
+			children = (
+				957D73082C1A13E9604307D1 /* TimerScreenInComposeUIViewControllerRepresentable.swift */,
+			);
+			name = SharedRepresentables;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +288,7 @@
 				5CCA1EA32B900C0600538774 /* CircularProgress.swift in Sources */,
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
 				5C5B527B2B90C91B00CE74C8 /* HeaderLogo.swift in Sources */,
+				6F93DE8251303923E8C02024 /* TimerScreenInComposeUIViewControllerRepresentable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

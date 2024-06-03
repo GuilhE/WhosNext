@@ -1,5 +1,4 @@
 import SwiftUI
-import WhosNextComposables
 
 struct TimerScreenInCompose: View {
     let onClose: () -> Void
@@ -12,15 +11,6 @@ struct TimerScreenInCompose: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         }
     }
-}
-
-public struct TimerScreenInComposeRepresentable: UIViewControllerRepresentable {
-    
-    public func makeUIViewController(context: Context) -> UIViewController {
-        TimerScreenInComposeUIViewController().make()
-    }
-    
-    public func updateUIViewController(_ uiViewController: UIViewController, context: Context) { }
 }
 
 #Preview {

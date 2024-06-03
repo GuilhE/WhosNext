@@ -8,24 +8,16 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
-import androidx.compose.ui.window.ComposeUIViewController
+import com.github.guilhe.kmp.composeuiviewcontroller.ComposeUIViewController
 import com.whosnext.app.DependencyInjection
 import com.whosnext.app.ViewModels
 import com.whosnext.ui.screens.TimerScreen
 import org.koin.core.error.ApplicationAlreadyStartedException
-import platform.UIKit.UIViewController
 
 @Suppress("unused")
-object TimerScreenInComposeUIViewController {
-    fun make(): UIViewController {
-        return ComposeUIViewController {
-            TimerScreenInCompose()
-        }
-    }
-}
-
+@ComposeUIViewController("WhosNextComposables")
 @Composable
-private fun TimerScreenInCompose() {
+internal fun TimerScreenInCompose() {
     val viewModel = remember {
         try {
             DependencyInjection.initKoin()
