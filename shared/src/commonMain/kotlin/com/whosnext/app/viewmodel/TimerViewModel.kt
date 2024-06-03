@@ -92,6 +92,14 @@ class TimerViewModel(stateRestoreEnabled: Boolean = true) : ViewModel() {
     private fun play() {
         viewModelScope.coroutineScope.launch {
             try {
+                @Suppress("SENSELESS_COMPARISON")
+                /**
+                 * Sometimes ViewModel restores faster than FSM, this try-catch block insures it wont crash.
+                 * Recovering state in some targets will throw a [RuntimeException] but for some reason it will not hit the catch block.
+                 * This will force it
+                 */
+                if(stateMachine == null) throw RuntimeException()
+
                 while (stateMachine.currentState() == TimerState.State.CountingDown) {
                     with(uiState.value) {
                         if (progress == 100f) {
@@ -106,8 +114,7 @@ class TimerViewModel(stateRestoreEnabled: Boolean = true) : ViewModel() {
                         delay(STEP_DELAY)
                     }
                 }
-            } catch (ignore: NullPointerException) {
-                //On Android sometimes VM restores faster then FSM, this insures at least it "pauses" instead of crashing.
+            } catch (ignore: RuntimeException) {
                 delay(10)
                 play()
             }

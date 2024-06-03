@@ -14,7 +14,6 @@ import com.whosnext.app.ViewModels
 import com.whosnext.ui.screens.TimerScreen
 import org.koin.core.error.ApplicationAlreadyStartedException
 
-@Suppress("unused")
 @ComposeUIViewController("WhosNextComposables")
 @Composable
 internal fun TimerScreenInCompose() {
