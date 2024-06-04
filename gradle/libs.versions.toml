@@ -30,7 +30,7 @@ nativecoroutines = "1.0.0-ALPHA-31"
 kmpViewModel = "1.0.0-BETA-3"
 kmpSettings = "1.1.1"
 kmpConstraintlayout = "0.3.1"
-composeuiviewcontroller = "2.0.0-1.6.10-BETA-4"
+composeuiviewcontroller = "2.0.0-1.6.11"
 
 [plugins]
 
