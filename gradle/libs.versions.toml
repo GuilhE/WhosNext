@@ -5,7 +5,7 @@ kotlin = "2.0.0"
 kotlinxCoroutines = "1.8.1"
 kotlinxSerialization = "1.6.3"
 kotlinxAtomicFu = "0.24.0"
-kotlinxCompose = "1.6.10"
+kotlinxCompose = "1.6.11"
 
 #=====Google
 ksp = "2.0.0-1.0.21"
@@ -30,9 +30,10 @@ nativecoroutines = "1.0.0-ALPHA-31"
 kmpViewModel = "1.0.0-BETA-3"
 kmpSettings = "1.1.1"
 kmpConstraintlayout = "0.3.1"
-composeuiviewcontroller = "2.0.0-1.6.10-BETA-2"
+composeuiviewcontroller = "2.0.0-1.6.10-BETA-4"
 
 [plugins]
+
 android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
 android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
 kotlinx-compose = { id = "org.jetbrains.compose", version.ref = "kotlinxCompose" }
