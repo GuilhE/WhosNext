@@ -2,7 +2,7 @@ import SwiftUI
 import WhosNextShared
 
 @main
-struct iOSApp: App {
+struct WhosNextApp: App {
 
     init() {
         DependencyInjection().doInitKoin { _ in }

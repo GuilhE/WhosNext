@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		058557D9273AAEEB004C7B11 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */; };
-		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
+		149FB123183130EECE4A52C4 /* TimerScreenInComposeUIViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEBAF4A8F7F08D8D6CE05EB /* TimerScreenInComposeUIViewControllerRepresentable.swift */; };
+		2152FB042600AC8F00CF470E /* WhosNextApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* WhosNextApp.swift */; };
 		5C281C8B2B9162A8001F7788 /* TimerScreenInCompose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C281C872B9162A8001F7788 /* TimerScreenInCompose.swift */; };
 		5C281C8C2B9162A8001F7788 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C281C882B9162A8001F7788 /* SplashScreen.swift */; };
 		5C281C8D2B9162A8001F7788 /* TimerScreenInSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C281C892B9162A8001F7788 /* TimerScreenInSwift.swift */; };
@@ -26,12 +27,11 @@
 		5CCA1EA52B900C1F00538774 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCA1EA42B900C1F00538774 /* Utils.swift */; };
 		5CD4ACCD2BEEBB8B00B9CAD2 /* KMPObservableViewModelCore in Frameworks */ = {isa = PBXBuildFile; productRef = 5CD4ACCC2BEEBB8B00B9CAD2 /* KMPObservableViewModelCore */; };
 		5CD4ACCF2BEEBB8B00B9CAD2 /* KMPObservableViewModelSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 5CD4ACCE2BEEBB8B00B9CAD2 /* KMPObservableViewModelSwiftUI */; };
-		6F93DE8251303923E8C02024 /* TimerScreenInComposeUIViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957D73082C1A13E9604307D1 /* TimerScreenInComposeUIViewControllerRepresentable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		2152FB032600AC8F00CF470E /* iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSApp.swift; sourceTree = "<group>"; };
+		2152FB032600AC8F00CF470E /* WhosNextApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhosNextApp.swift; sourceTree = "<group>"; };
 		5C281C872B9162A8001F7788 /* TimerScreenInCompose.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerScreenInCompose.swift; sourceTree = "<group>"; };
 		5C281C882B9162A8001F7788 /* SplashScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		5C281C892B9162A8001F7788 /* TimerScreenInSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerScreenInSwift.swift; sourceTree = "<group>"; };
@@ -49,8 +49,8 @@
 		5CCA1EA42B900C1F00538774 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		7555FF7B242A565900829871 /* WhosNext.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhosNext.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		957D73082C1A13E9604307D1 /* TimerScreenInComposeUIViewControllerRepresentable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimerScreenInComposeUIViewControllerRepresentable.swift; path = SharedRepresentables/TimerScreenInComposeUIViewControllerRepresentable.swift; sourceTree = "<group>"; };
 		AB3632DC29227652001CCB65 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		ADEBAF4A8F7F08D8D6CE05EB /* TimerScreenInComposeUIViewControllerRepresentable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimerScreenInComposeUIViewControllerRepresentable.swift; path = SharedRepresentables/TimerScreenInComposeUIViewControllerRepresentable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,14 +123,22 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		654145CE678EF1714A876CE8 /* SharedRepresentables */ = {
+			isa = PBXGroup;
+			children = (
+				ADEBAF4A8F7F08D8D6CE05EB /* TimerScreenInComposeUIViewControllerRepresentable.swift */,
+			);
+			name = SharedRepresentables;
+			sourceTree = "<group>";
+		};
 		7555FF72242A565900829871 = {
 			isa = PBXGroup;
 			children = (
 				AB1DB47929225F7C00F7AF9C /* Configuration */,
-				7555FF7D242A565900829871 /* iosApp */,
+				7555FF7D242A565900829871 /* WhosNext */,
 				7555FF7C242A565900829871 /* Products */,
 				42799AB246E5F90AF97AA0EF /* Frameworks */,
-				BEEEFBBB7480A3CCE3DC80BB /* SharedRepresentables */,
+				654145CE678EF1714A876CE8 /* SharedRepresentables */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,7 +150,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7555FF7D242A565900829871 /* iosApp */ = {
+		7555FF7D242A565900829871 /* WhosNext */ = {
 			isa = PBXGroup;
 			children = (
 				058557D7273AAEEB004C7B11 /* Preview Content */,
@@ -152,9 +160,9 @@
 				5CCA1E972B900B4A00538774 /* Utils */,
 				5CCA1E962B900B3C00538774 /* Views */,
 				5CCA1E952B900B3000538774 /* Screens */,
-				2152FB032600AC8F00CF470E /* iOSApp.swift */,
+				2152FB032600AC8F00CF470E /* WhosNextApp.swift */,
 			);
-			path = iosApp;
+			path = WhosNext;
 			sourceTree = "<group>";
 		};
 		AB1DB47929225F7C00F7AF9C /* Configuration */ = {
@@ -165,20 +173,12 @@
 			path = Configuration;
 			sourceTree = "<group>";
 		};
-		BEEEFBBB7480A3CCE3DC80BB /* SharedRepresentables */ = {
-			isa = PBXGroup;
-			children = (
-				957D73082C1A13E9604307D1 /* TimerScreenInComposeUIViewControllerRepresentable.swift */,
-			);
-			name = SharedRepresentables;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7555FF7A242A565900829871 /* iosApp */ = {
+		7555FF7A242A565900829871 /* WhosNext */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7555FFA5242A565B00829871 /* Build configuration list for PBXNativeTarget "iosApp" */;
+			buildConfigurationList = 7555FFA5242A565B00829871 /* Build configuration list for PBXNativeTarget "WhosNext" */;
 			buildPhases = (
 				F36B1CEA2AD836FC00CB74D5 /* Compile Kotlin Framework */,
 				7555FF77242A565900829871 /* Sources */,
@@ -189,7 +189,7 @@
 			);
 			dependencies = (
 			);
-			name = iosApp;
+			name = WhosNext;
 			packageProductDependencies = (
 				5CD4ACCC2BEEBB8B00B9CAD2 /* KMPObservableViewModelCore */,
 				5CD4ACCE2BEEBB8B00B9CAD2 /* KMPObservableViewModelSwiftUI */,
@@ -213,7 +213,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7555FF76242A565900829871 /* Build configuration list for PBXProject "iosApp" */;
+			buildConfigurationList = 7555FF76242A565900829871 /* Build configuration list for PBXProject "WhosNext" */;
 			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -229,7 +229,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7555FF7A242A565900829871 /* iosApp */,
+				7555FF7A242A565900829871 /* WhosNext */,
 			);
 		};
 /* End PBXProject section */
@@ -286,9 +286,9 @@
 				5CCA1EA52B900C1F00538774 /* Utils.swift in Sources */,
 				5C281C8D2B9162A8001F7788 /* TimerScreenInSwift.swift in Sources */,
 				5CCA1EA32B900C0600538774 /* CircularProgress.swift in Sources */,
-				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
+				2152FB042600AC8F00CF470E /* WhosNextApp.swift in Sources */,
 				5C5B527B2B90C91B00CE74C8 /* HeaderLogo.swift in Sources */,
-				6F93DE8251303923E8C02024 /* TimerScreenInComposeUIViewControllerRepresentable.swift in Sources */,
+				149FB123183130EECE4A52C4 /* TimerScreenInComposeUIViewControllerRepresentable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,14 +420,14 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"iosApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"WhosNext/Preview Content\"";
 				DEVELOPMENT_TEAM = K9L9Z6A2RK;
 				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)/../shared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)",
 					"$(SRCROOT)/../shared-ui/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)",
 				);
-				INFOPLIST_FILE = iosApp/Info.plist;
+				INFOPLIST_FILE = WhosNext/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = WhosNext;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.3;
@@ -455,14 +455,14 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"iosApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"WhosNext/Preview Content\"";
 				DEVELOPMENT_TEAM = K9L9Z6A2RK;
 				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)/../shared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)",
 					"$(SRCROOT)/../shared-ui/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)",
 				);
-				INFOPLIST_FILE = iosApp/Info.plist;
+				INFOPLIST_FILE = WhosNext/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = WhosNext;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.3;
@@ -486,7 +486,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7555FF76242A565900829871 /* Build configuration list for PBXProject "iosApp" */ = {
+		7555FF76242A565900829871 /* Build configuration list for PBXProject "WhosNext" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7555FFA3242A565B00829871 /* Debug */,
@@ -495,7 +495,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7555FFA5242A565B00829871 /* Build configuration list for PBXNativeTarget "iosApp" */ = {
+		7555FFA5242A565B00829871 /* Build configuration list for PBXNativeTarget "WhosNext" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7555FFA6242A565B00829871 /* Debug */,
