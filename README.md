@@ -48,7 +48,7 @@ Supports: `jvm` (android and desktop), `native` (iOS) and `wasm` (web)
 
 - Uses SwiftUI and Compose Multiplatform
  
-To run it open `iosApp/iosApp.xcodeproj` in Xcode and run standard configuration or use [KMM plugin](https://plugins.jetbrains.com/plugin/14936-kotlin-multiplatform-mobile) for Android Studio and choose `iosApp` in `run configurations`.
+To run it open `iosApp/WhosNext.xcodeproj` in Xcode and run standard configuration or use [KMM plugin](https://plugins.jetbrains.com/plugin/14936-kotlin-multiplatform-mobile) for Android Studio and choose `iosApp` in `run configurations`.
 
 #### desktopApp
 
