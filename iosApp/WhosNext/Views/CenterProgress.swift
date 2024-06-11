@@ -48,3 +48,17 @@ struct CenterProgress_Previews: PreviewProvider {
         .ignoresSafeArea()
     }
 }
+
+/*
+#Preview {
+    @Previewable @State var progress : Float = 0.3
+    let animation : Animation = Animation.linear(duration: 0.25)
+    return ZStack {
+        ColorsPallete.green
+        VStack {
+            CenterProgress(progress: $progress, label: "22:14", isCountingDown: true, isRestarting: false, countDownAnimation: animation, restartAnimation: animation, stopAnimation: animation)
+        }
+    }
+    .ignoresSafeArea()
+}
+*/
