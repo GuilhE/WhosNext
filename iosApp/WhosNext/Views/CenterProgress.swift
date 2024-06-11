@@ -1,5 +1,4 @@
 import SwiftUI
-import WhosNextShared
 
 struct CenterProgress: View {
     @Binding var progress: Float
@@ -50,7 +49,7 @@ struct CenterProgress_Previews: PreviewProvider {
 }
 
 /*
-#Preview {
+ #Preview {
     @Previewable @State var progress : Float = 0.3
     let animation : Animation = Animation.linear(duration: 0.25)
     return ZStack {

@@ -66,7 +66,7 @@ struct CircularProgress_Previews: PreviewProvider {
 }
 
 /*
-#Preview {
+ #Preview {
     @Previewable @State var progress : Float = 0.0
     let animation : Animation = Animation.linear(duration: 0.25)
     return ZStack {
