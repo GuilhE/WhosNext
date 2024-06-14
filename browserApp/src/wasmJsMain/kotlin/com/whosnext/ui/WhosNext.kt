@@ -2,6 +2,7 @@ package com.whosnext.ui
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.Spring
+import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.animation.core.animateSizeAsState
 import androidx.compose.animation.core.spring
 import androidx.compose.animation.fadeOut
@@ -9,6 +10,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.requiredSize
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -38,11 +40,16 @@ fun main() {
         }
         var showSplash by remember { mutableStateOf(true) }
         var showTimer by remember { mutableStateOf(false) }
+        val minAvailableWidth = 400.dp
+        val minAvailableHeight = 600.dp
 
         BoxWithConstraints(Modifier.fillMaxSize()) {
-            val smallWidth = maxWidth <= 400.dp
-            val finalSize = DpSize(400.dp, if (maxHeight > 800.dp) 800.dp else maxHeight)
-
+            val hasSmallWidth = maxWidth <= minAvailableWidth
+            val hasSmallHeight = maxHeight <= minAvailableHeight
+            val finalSize = DpSize(
+                width = minAvailableWidth,
+                height = if (maxHeight > 800.dp) 800.dp else if (hasSmallHeight) minAvailableHeight else maxHeight
+            )
             val size by animateSizeAsState(
                 targetValue = if (showTimer) Size(finalSize.width.value, finalSize.height.value) else Size(maxWidth.value, maxHeight.value),
                 animationSpec = spring(dampingRatio = 1.5f, stiffness = Spring.StiffnessMedium),
@@ -52,16 +59,20 @@ fun main() {
                     }
                 }
             )
+            val corner by animateDpAsState(
+                targetValue = if (showTimer && (!hasSmallWidth && !hasSmallHeight)) 20.dp else 0.dp,
+                animationSpec = spring(dampingRatio = 1.5f, stiffness = Spring.StiffnessMedium),
+            )
 
             if (showTimer) {
                 Box(
                     modifier = Modifier
+                        .requiredSize(finalSize)
                         .align(Alignment.Center)
                         .graphicsLayer {
                             clip = true
-                            shape = RoundedCornerShape(if (showTimer && !smallWidth) 20.dp else 0.dp)
+                            shape = RoundedCornerShape(corner)
                         }
-                        .requiredSize(finalSize)
                 ) {
                     with(viewModel.uiState.collectAsState().value) {
                         Box {
@@ -99,15 +110,15 @@ fun main() {
             AnimatedVisibility(
                 visible = showSplash,
                 modifier = Modifier
+                    .size(size.width.dp, size.height.dp)
                     .align(Alignment.Center)
                     .graphicsLayer {
                         clip = true
-                        shape = RoundedCornerShape(if (showTimer && !smallWidth) 20.dp else 0.dp)
-                    }
-                    .requiredSize(DpSize(size.width.dp, size.height.dp)),
+                        shape = RoundedCornerShape(if (showTimer && !hasSmallWidth) 20.dp else 0.dp)
+                    },
                 exit = fadeOut()
             ) {
-                SplashScreenWasm(finalSize, onStart = { showTimer = true })
+                SplashScreenWasm(minAvailableWidth, minAvailableHeight, onEnter = { showTimer = true })
             }
         }
     }
