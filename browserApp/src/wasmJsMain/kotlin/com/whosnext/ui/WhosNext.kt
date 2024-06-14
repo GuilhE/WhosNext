@@ -38,15 +38,19 @@ fun main() {
         }
         var showSplash by remember { mutableStateOf(true) }
         var showTimer by remember { mutableStateOf(false) }
-        val finalSize = DpSize(400.dp, 800.dp)
 
         BoxWithConstraints(Modifier.fillMaxSize()) {
-            val fullWith = remember { maxWidth }
-            val fullHeight = remember { maxHeight }
+            val smallWidth = maxWidth <= 400.dp
+            val finalSize = DpSize(400.dp, if (maxHeight > 800.dp) 800.dp else maxHeight)
+
             val size by animateSizeAsState(
-                targetValue = if (showTimer) Size(finalSize.width.value, finalSize.height.value) else Size(fullWith.value, fullHeight.value),
+                targetValue = if (showTimer) Size(finalSize.width.value, finalSize.height.value) else Size(maxWidth.value, maxHeight.value),
                 animationSpec = spring(dampingRatio = 1.5f, stiffness = Spring.StiffnessMedium),
-                finishedListener = { showSplash = false }
+                finishedListener = {
+                    if (showTimer) {
+                        showSplash = false
+                    }
+                }
             )
 
             if (showTimer) {
@@ -55,7 +59,7 @@ fun main() {
                         .align(Alignment.Center)
                         .graphicsLayer {
                             clip = true
-                            shape = RoundedCornerShape(20.dp)
+                            shape = RoundedCornerShape(if (showTimer && !smallWidth) 20.dp else 0.dp)
                         }
                         .requiredSize(finalSize)
                 ) {
@@ -98,14 +102,12 @@ fun main() {
                     .align(Alignment.Center)
                     .graphicsLayer {
                         clip = true
-                        shape = RoundedCornerShape(if (showTimer) 20.dp else 0.dp)
+                        shape = RoundedCornerShape(if (showTimer && !smallWidth) 20.dp else 0.dp)
                     }
                     .requiredSize(DpSize(size.width.dp, size.height.dp)),
                 exit = fadeOut()
             ) {
-                SplashScreenWasm {
-                    showTimer = true
-                }
+                SplashScreenWasm(finalSize, onStart = { showTimer = true })
             }
         }
     }

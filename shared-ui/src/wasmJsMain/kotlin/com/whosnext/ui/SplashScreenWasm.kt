@@ -1,15 +1,16 @@
 package com.whosnext.ui
 
+import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.RepeatMode
 import androidx.compose.animation.core.animateFloat
 import androidx.compose.animation.core.infiniteRepeatable
 import androidx.compose.animation.core.rememberInfiniteTransition
 import androidx.compose.animation.core.tween
+import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -18,7 +19,9 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.scale
@@ -35,7 +38,8 @@ import whosnext.shared_ui.generated.resources.bg_texture
 import whosnext.shared_ui.generated.resources.lbl_start
 
 @Composable
-fun SplashScreenWasm(onStart: () -> Unit) {
+fun SplashScreenWasm(finalSize: DpSize, onStart: () -> Unit) {
+    var showLabel by remember { mutableStateOf(true) }
     SplashTheme {
         BoxWithConstraints(
             Modifier
@@ -44,7 +48,10 @@ fun SplashScreenWasm(onStart: () -> Unit) {
                 .clickable(
                     interactionSource = remember { MutableInteractionSource() },
                     indication = null
-                ) { onStart() }
+                ) {
+                    showLabel = false
+                    onStart()
+                }
         ) {
             val height = remember { maxHeight }
             val scale by rememberInfiniteTransition().animateFloat(
@@ -64,11 +71,14 @@ fun SplashScreenWasm(onStart: () -> Unit) {
             SplashScreen(
                 modifier = Modifier
                     .align(Alignment.Center)
-                    .requiredSize(DpSize(400.dp, height))
+                    .requiredSize(DpSize(finalSize.width, height))
             )
-            Box(modifier = Modifier
-                .align(Alignment.Center)
-                .padding(top = 350.dp)
+            AnimatedVisibility(
+                visible = showLabel,
+                exit = fadeOut(),
+                modifier = Modifier
+                    .align(Alignment.Center)
+                    .padding(top = 350.dp)
             ) {
                 Text(
                     modifier = Modifier.scale(scale),
