@@ -31,6 +31,7 @@ kmpViewModel = "1.0.0-BETA-3"
 kmpSettings = "1.1.1"
 kmpConstraintlayout = "0.3.1"
 composeuiviewcontroller = "2.0.0-1.6.11-BETA-1"
+windowSizeClass = "0.5.0"
 
 [plugins]
 
@@ -63,6 +64,7 @@ kmp-viewmodel = { group = "com.rickclephas.kmp", name = "kmp-observableviewmodel
 kmp-constraintlayout = { group = "tech.annexflow.compose", name = "constraintlayout-compose-multiplatform", version.ref = "kmpConstraintlayout" }
 kmp-composeuiviewcontroller-annotations = {group = "com.github.guilhe.kmp", name = "kmp-composeuiviewcontroller-annotations", version.ref = "composeuiviewcontroller"}
 kmp-composeuiviewcontroller-ksp = {group = "com.github.guilhe.kmp", name = "kmp-composeuiviewcontroller-ksp", version.ref = "composeuiviewcontroller"}
+kmp-windowsizeclass = {group = "dev.chrisbanes.material3", name = "material3-window-size-class-multiplatform", version.ref = "windowSizeClass"}
 
 #======Android
 android-material = { group = "com.google.android.material", name = "material", version.ref = "androidMaterial" }

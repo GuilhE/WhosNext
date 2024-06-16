@@ -24,6 +24,7 @@ kotlin {
                 implementation(compose.material3)
                 implementation(compose.ui)
                 implementation(compose.components.resources)
+                implementation(libs.kmp.windowsizeclass)
             }
         }
     }

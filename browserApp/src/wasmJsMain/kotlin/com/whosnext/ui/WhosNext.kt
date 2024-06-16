@@ -12,6 +12,10 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.requiredSize
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.windowsizeclass.ExperimentalMaterial3WindowSizeClassApi
+import androidx.compose.material3.windowsizeclass.WindowHeightSizeClass
+import androidx.compose.material3.windowsizeclass.WindowWidthSizeClass
+import androidx.compose.material3.windowsizeclass.calculateWindowSizeClass
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -31,7 +35,7 @@ import com.whosnext.app.DependencyInjection
 import com.whosnext.app.ViewModels
 import com.whosnext.ui.screens.TimerScreen
 
-@OptIn(ExperimentalComposeUiApi::class)
+@OptIn(ExperimentalComposeUiApi::class, ExperimentalMaterial3WindowSizeClassApi::class)
 fun main() {
     CanvasBasedWindow(canvasElementId = "WhosNext") {
         val viewModel = remember {
@@ -42,13 +46,19 @@ fun main() {
         var showTimer by remember { mutableStateOf(false) }
         val minAvailableWidth = 400.dp
         val minAvailableHeight = 600.dp
+        val windowSizeClass = calculateWindowSizeClass()
+        val isCompactWindow = windowSizeClass.widthSizeClass.isCompact() || windowSizeClass.heightSizeClass.isCompact()
 
         BoxWithConstraints(Modifier.fillMaxSize()) {
-            val hasSmallWidth = maxWidth <= minAvailableWidth
-            val hasSmallHeight = maxHeight <= minAvailableHeight
             val finalSize = DpSize(
-                width = minAvailableWidth,
-                height = if (maxHeight > 800.dp) 800.dp else if (hasSmallHeight) minAvailableHeight else maxHeight
+                width = when {
+                    windowSizeClass.widthSizeClass.isCompact() -> maxOf(maxWidth, minAvailableWidth)
+                    else -> minAvailableWidth
+                },
+                height = when {
+                    windowSizeClass.widthSizeClass.isCompact() -> maxOf(maxHeight, minAvailableHeight)
+                    else -> minOf(800.dp, maxOf(minAvailableHeight, maxHeight))
+                }
             )
             val size by animateSizeAsState(
                 targetValue = if (showTimer) Size(finalSize.width.value, finalSize.height.value) else Size(maxWidth.value, maxHeight.value),
@@ -60,7 +70,7 @@ fun main() {
                 }
             )
             val corner by animateDpAsState(
-                targetValue = if (showTimer && (!hasSmallWidth && !hasSmallHeight)) 20.dp else 0.dp,
+                targetValue = if (!isCompactWindow && showTimer) 20.dp else 0.dp,
                 animationSpec = spring(dampingRatio = 1.5f, stiffness = Spring.StiffnessMedium),
             )
 
@@ -114,12 +124,20 @@ fun main() {
                     .align(Alignment.Center)
                     .graphicsLayer {
                         clip = true
-                        shape = RoundedCornerShape(if (showTimer && !hasSmallWidth) 20.dp else 0.dp)
+                        shape = RoundedCornerShape(corner)
                     },
                 exit = fadeOut()
             ) {
-                SplashScreenWasm(minAvailableWidth, minAvailableHeight, onEnter = { showTimer = true })
+                SplashScreenWasm(minAvailableWidth, minAvailableHeight, onEnter = {
+                    showTimer = true
+                    if (isCompactWindow) {
+                        showSplash = false
+                    }
+                })
             }
         }
     }
 }
+
+private fun WindowWidthSizeClass.isCompact() = this == WindowWidthSizeClass.Compact
+private fun WindowHeightSizeClass.isCompact() = this == WindowHeightSizeClass.Compact
