@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.targets.js.webpack.KotlinWebpackConfig
+
 plugins {
     id("buildlogic.plugins.kmp.compose")
 }
@@ -9,6 +11,12 @@ kotlin {
         browser {
             commonWebpackConfig {
                 outputFileName = "browserApp.js"
+                devServer = (devServer ?: KotlinWebpackConfig.DevServer()).apply {
+                    static = (static ?: mutableListOf()).apply {
+                        add(project.rootDir.path)
+                        add(project.projectDir.path)
+                    }
+                }
             }
         }
         binaries.executable()
