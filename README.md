@@ -24,7 +24,7 @@ Supports: `jvm` (android and desktop), `native` (iOS) and `wasm` (web)
 - Finite State Machine to validate state transitions
 - State emission by Kotlin Flow
 - State restoration (both for UI State and FSM State)
-- ViewModel shared by [KMM-ViewModel](https://github.com/rickclephas/KMM-ViewModel)
+- ViewModel shared by [KMP-ObservableViewModel](https://github.com/rickclephas/KMP-ObservableViewModel)
 
 <p>
   </br>
