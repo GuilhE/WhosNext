@@ -14,7 +14,7 @@ import com.whosnext.app.ViewModels
 import com.whosnext.ui.screens.TimerScreen
 import org.koin.core.error.ApplicationAlreadyStartedException
 
-@ComposeUIViewController("WhosNextComposables")
+@ComposeUIViewController
 @Composable
 internal fun TimerScreenInCompose() {
     val viewModel = remember {
