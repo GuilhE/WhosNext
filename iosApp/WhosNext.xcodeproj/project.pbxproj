@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		058557D9273AAEEB004C7B11 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */; };
 		2152FB042600AC8F00CF470E /* WhosNextApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* WhosNextApp.swift */; };
-		59AD716155FB61D1B2E405F4 /* TimerScreenInComposeUIViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF816BF40D0FA2ADA45B71C5 /* TimerScreenInComposeUIViewControllerRepresentable.swift */; };
 		5C281C8B2B9162A8001F7788 /* TimerScreenInCompose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C281C872B9162A8001F7788 /* TimerScreenInCompose.swift */; };
 		5C281C8C2B9162A8001F7788 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C281C882B9162A8001F7788 /* SplashScreen.swift */; };
 		5C281C8D2B9162A8001F7788 /* TimerScreenInSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C281C892B9162A8001F7788 /* TimerScreenInSwift.swift */; };
@@ -18,6 +17,8 @@
 		5C5B527B2B90C91B00CE74C8 /* HeaderLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5B527A2B90C91B00CE74C8 /* HeaderLogo.swift */; };
 		5C5B527D2B90C97900CE74C8 /* CenterProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5B527C2B90C97900CE74C8 /* CenterProgress.swift */; };
 		5C5B527F2B90C9A900CE74C8 /* BottomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5B527E2B90C9A900CE74C8 /* BottomButtons.swift */; };
+		5C9FA25E2C36B12D008E5254 /* KMPObservableViewModelCore in Frameworks */ = {isa = PBXBuildFile; productRef = 5C9FA25D2C36B12D008E5254 /* KMPObservableViewModelCore */; };
+		5C9FA2602C36B12D008E5254 /* KMPObservableViewModelSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 5C9FA25F2C36B12D008E5254 /* KMPObservableViewModelSwiftUI */; };
 		5CBA46932B9366F50035F948 /* whosnext_light_italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5CBA46912B9366F50035F948 /* whosnext_light_italic.ttf */; };
 		5CBA46942B9366F50035F948 /* timesup.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5CBA46922B9366F50035F948 /* timesup.mp3 */; };
 		5CBA46962B93674C0035F948 /* helvetica_neue_light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5CBA46952B93674C0035F948 /* helvetica_neue_light.otf */; };
@@ -25,8 +26,7 @@
 		5CCA1E992B900B6300538774 /* KMPViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCA1E982B900B6300538774 /* KMPViewModel.swift */; };
 		5CCA1EA32B900C0600538774 /* CircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCA1EA22B900C0600538774 /* CircularProgress.swift */; };
 		5CCA1EA52B900C1F00538774 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCA1EA42B900C1F00538774 /* Utils.swift */; };
-		5CD4ACCD2BEEBB8B00B9CAD2 /* KMPObservableViewModelCore in Frameworks */ = {isa = PBXBuildFile; productRef = 5CD4ACCC2BEEBB8B00B9CAD2 /* KMPObservableViewModelCore */; };
-		5CD4ACCF2BEEBB8B00B9CAD2 /* KMPObservableViewModelSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 5CD4ACCE2BEEBB8B00B9CAD2 /* KMPObservableViewModelSwiftUI */; };
+		D44ACFA034CE7EF519DEED32 /* TimerScreenInComposeUIViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54122C5FB2C11BF865D0914 /* TimerScreenInComposeUIViewControllerRepresentable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,7 +50,7 @@
 		7555FF7B242A565900829871 /* WhosNext.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhosNext.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB3632DC29227652001CCB65 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
-		BF816BF40D0FA2ADA45B71C5 /* TimerScreenInComposeUIViewControllerRepresentable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimerScreenInComposeUIViewControllerRepresentable.swift; path = Representables/TimerScreenInComposeUIViewControllerRepresentable.swift; sourceTree = "<group>"; };
+		F54122C5FB2C11BF865D0914 /* TimerScreenInComposeUIViewControllerRepresentable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimerScreenInComposeUIViewControllerRepresentable.swift; path = Representables/TimerScreenInComposeUIViewControllerRepresentable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CD4ACCD2BEEBB8B00B9CAD2 /* KMPObservableViewModelCore in Frameworks */,
-				5CD4ACCF2BEEBB8B00B9CAD2 /* KMPObservableViewModelSwiftUI in Frameworks */,
+				5C9FA25E2C36B12D008E5254 /* KMPObservableViewModelCore in Frameworks */,
+				5C9FA2602C36B12D008E5254 /* KMPObservableViewModelSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,7 +77,7 @@
 		32CAC6BAA4628D8E15FF23DE /* Representables */ = {
 			isa = PBXGroup;
 			children = (
-				BF816BF40D0FA2ADA45B71C5 /* TimerScreenInComposeUIViewControllerRepresentable.swift */,
+				F54122C5FB2C11BF865D0914 /* TimerScreenInComposeUIViewControllerRepresentable.swift */,
 			);
 			name = Representables;
 			sourceTree = "<group>";
@@ -191,8 +191,8 @@
 			);
 			name = WhosNext;
 			packageProductDependencies = (
-				5CD4ACCC2BEEBB8B00B9CAD2 /* KMPObservableViewModelCore */,
-				5CD4ACCE2BEEBB8B00B9CAD2 /* KMPObservableViewModelSwiftUI */,
+				5C9FA25D2C36B12D008E5254 /* KMPObservableViewModelCore */,
+				5C9FA25F2C36B12D008E5254 /* KMPObservableViewModelSwiftUI */,
 			);
 			productName = iosApp;
 			productReference = 7555FF7B242A565900829871 /* WhosNext.app */;
@@ -223,7 +223,7 @@
 			);
 			mainGroup = 7555FF72242A565900829871;
 			packageReferences = (
-				5CD4ACCB2BEEBB8B00B9CAD2 /* XCRemoteSwiftPackageReference "KMP-ObservableViewModel" */,
+				5C9FA25C2C36B12D008E5254 /* XCRemoteSwiftPackageReference "KMP-ObservableViewModel" */,
 			);
 			productRefGroup = 7555FF7C242A565900829871 /* Products */;
 			projectDirPath = "";
@@ -288,7 +288,7 @@
 				5CCA1EA32B900C0600538774 /* CircularProgress.swift in Sources */,
 				2152FB042600AC8F00CF470E /* WhosNextApp.swift in Sources */,
 				5C5B527B2B90C91B00CE74C8 /* HeaderLogo.swift in Sources */,
-				59AD716155FB61D1B2E405F4 /* TimerScreenInComposeUIViewControllerRepresentable.swift in Sources */,
+				D44ACFA034CE7EF519DEED32 /* TimerScreenInComposeUIViewControllerRepresentable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,7 +507,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		5CD4ACCB2BEEBB8B00B9CAD2 /* XCRemoteSwiftPackageReference "KMP-ObservableViewModel" */ = {
+		5C9FA25C2C36B12D008E5254 /* XCRemoteSwiftPackageReference "KMP-ObservableViewModel" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/rickclephas/KMP-ObservableViewModel.git";
 			requirement = {
@@ -518,14 +518,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		5CD4ACCC2BEEBB8B00B9CAD2 /* KMPObservableViewModelCore */ = {
+		5C9FA25D2C36B12D008E5254 /* KMPObservableViewModelCore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5CD4ACCB2BEEBB8B00B9CAD2 /* XCRemoteSwiftPackageReference "KMP-ObservableViewModel" */;
+			package = 5C9FA25C2C36B12D008E5254 /* XCRemoteSwiftPackageReference "KMP-ObservableViewModel" */;
 			productName = KMPObservableViewModelCore;
 		};
-		5CD4ACCE2BEEBB8B00B9CAD2 /* KMPObservableViewModelSwiftUI */ = {
+		5C9FA25F2C36B12D008E5254 /* KMPObservableViewModelSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5CD4ACCB2BEEBB8B00B9CAD2 /* XCRemoteSwiftPackageReference "KMP-ObservableViewModel" */;
+			package = 5C9FA25C2C36B12D008E5254 /* XCRemoteSwiftPackageReference "KMP-ObservableViewModel" */;
 			productName = KMPObservableViewModelSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */

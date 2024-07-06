@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlinx.serialization)
     alias(libs.plugins.google.ksp)
     alias(libs.plugins.nativecoroutines)
+    alias(libs.plugins.kotlinx.atomicfu)
 }
 
 android {
@@ -32,7 +33,6 @@ kotlin {
         commonMain.dependencies {
             implementation(libs.kotlinx.coroutines.core)
             implementation(libs.kotlinx.serialization)
-            implementation(libs.kotlinx.atomicfu)
             implementation(libs.kmp.settings)
             api(libs.kmp.viewmodel)
             api(libs.kmp.koin.core)

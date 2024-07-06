@@ -3,9 +3,10 @@
 pluginManagement {
     includeBuild("build-logic")
     repositories {
-        google()
-        gradlePluginPortal()
+        mavenLocal()
         mavenCentral()
+        gradlePluginPortal()
+        google()
         maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
     }
 }
@@ -13,8 +14,9 @@ pluginManagement {
 dependencyResolutionManagement {
 //    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
-        google()
+        mavenLocal()
         mavenCentral()
+        google()
         maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
     }
 }
