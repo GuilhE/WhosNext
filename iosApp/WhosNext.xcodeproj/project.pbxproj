@@ -17,16 +17,16 @@
 		5C5B527B2B90C91B00CE74C8 /* HeaderLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5B527A2B90C91B00CE74C8 /* HeaderLogo.swift */; };
 		5C5B527D2B90C97900CE74C8 /* CenterProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5B527C2B90C97900CE74C8 /* CenterProgress.swift */; };
 		5C5B527F2B90C9A900CE74C8 /* BottomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5B527E2B90C9A900CE74C8 /* BottomButtons.swift */; };
-		5C9FA25E2C36B12D008E5254 /* KMPObservableViewModelCore in Frameworks */ = {isa = PBXBuildFile; productRef = 5C9FA25D2C36B12D008E5254 /* KMPObservableViewModelCore */; };
-		5C9FA2602C36B12D008E5254 /* KMPObservableViewModelSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 5C9FA25F2C36B12D008E5254 /* KMPObservableViewModelSwiftUI */; };
 		5CBA46932B9366F50035F948 /* whosnext_light_italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5CBA46912B9366F50035F948 /* whosnext_light_italic.ttf */; };
 		5CBA46942B9366F50035F948 /* timesup.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5CBA46922B9366F50035F948 /* timesup.mp3 */; };
 		5CBA46962B93674C0035F948 /* helvetica_neue_light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5CBA46952B93674C0035F948 /* helvetica_neue_light.otf */; };
+		5CBEE1E12C398A09003DC5D7 /* KMPObservableViewModelCore in Frameworks */ = {isa = PBXBuildFile; productRef = 5CBEE1E02C398A09003DC5D7 /* KMPObservableViewModelCore */; };
+		5CBEE1E32C398A09003DC5D7 /* KMPObservableViewModelSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 5CBEE1E22C398A09003DC5D7 /* KMPObservableViewModelSwiftUI */; };
 		5CCA1E942B9009DB00538774 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CCA1E932B9009DB00538774 /* Assets.xcassets */; };
 		5CCA1E992B900B6300538774 /* KMPViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCA1E982B900B6300538774 /* KMPViewModel.swift */; };
 		5CCA1EA32B900C0600538774 /* CircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCA1EA22B900C0600538774 /* CircularProgress.swift */; };
 		5CCA1EA52B900C1F00538774 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCA1EA42B900C1F00538774 /* Utils.swift */; };
-		D44ACFA034CE7EF519DEED32 /* TimerScreenInComposeUIViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54122C5FB2C11BF865D0914 /* TimerScreenInComposeUIViewControllerRepresentable.swift */; };
+		FF01EA755101562FE1E3D9D1 /* TimerScreenInComposeUIViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7509D0834E524C5B1352E0A2 /* TimerScreenInComposeUIViewControllerRepresentable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,10 +47,10 @@
 		5CCA1E982B900B6300538774 /* KMPViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMPViewModel.swift; sourceTree = "<group>"; };
 		5CCA1EA22B900C0600538774 /* CircularProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgress.swift; sourceTree = "<group>"; };
 		5CCA1EA42B900C1F00538774 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		7509D0834E524C5B1352E0A2 /* TimerScreenInComposeUIViewControllerRepresentable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimerScreenInComposeUIViewControllerRepresentable.swift; path = Representables/TimerScreenInComposeUIViewControllerRepresentable.swift; sourceTree = "<group>"; };
 		7555FF7B242A565900829871 /* WhosNext.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhosNext.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB3632DC29227652001CCB65 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
-		F54122C5FB2C11BF865D0914 /* TimerScreenInComposeUIViewControllerRepresentable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimerScreenInComposeUIViewControllerRepresentable.swift; path = Representables/TimerScreenInComposeUIViewControllerRepresentable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C9FA25E2C36B12D008E5254 /* KMPObservableViewModelCore in Frameworks */,
-				5C9FA2602C36B12D008E5254 /* KMPObservableViewModelSwiftUI in Frameworks */,
+				5CBEE1E12C398A09003DC5D7 /* KMPObservableViewModelCore in Frameworks */,
+				5CBEE1E32C398A09003DC5D7 /* KMPObservableViewModelSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,14 +72,6 @@
 				058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		32CAC6BAA4628D8E15FF23DE /* Representables */ = {
-			isa = PBXGroup;
-			children = (
-				F54122C5FB2C11BF865D0914 /* TimerScreenInComposeUIViewControllerRepresentable.swift */,
-			);
-			name = Representables;
 			sourceTree = "<group>";
 		};
 		42799AB246E5F90AF97AA0EF /* Frameworks */ = {
@@ -138,7 +130,7 @@
 				7555FF7D242A565900829871 /* WhosNext */,
 				7555FF7C242A565900829871 /* Products */,
 				42799AB246E5F90AF97AA0EF /* Frameworks */,
-				32CAC6BAA4628D8E15FF23DE /* Representables */,
+				89C5FDEDB575D73818E2FDBD /* Representables */,
 			);
 			sourceTree = "<group>";
 		};
@@ -163,6 +155,14 @@
 				2152FB032600AC8F00CF470E /* WhosNextApp.swift */,
 			);
 			path = WhosNext;
+			sourceTree = "<group>";
+		};
+		89C5FDEDB575D73818E2FDBD /* Representables */ = {
+			isa = PBXGroup;
+			children = (
+				7509D0834E524C5B1352E0A2 /* TimerScreenInComposeUIViewControllerRepresentable.swift */,
+			);
+			name = Representables;
 			sourceTree = "<group>";
 		};
 		AB1DB47929225F7C00F7AF9C /* Configuration */ = {
@@ -191,8 +191,8 @@
 			);
 			name = WhosNext;
 			packageProductDependencies = (
-				5C9FA25D2C36B12D008E5254 /* KMPObservableViewModelCore */,
-				5C9FA25F2C36B12D008E5254 /* KMPObservableViewModelSwiftUI */,
+				5CBEE1E02C398A09003DC5D7 /* KMPObservableViewModelCore */,
+				5CBEE1E22C398A09003DC5D7 /* KMPObservableViewModelSwiftUI */,
 			);
 			productName = iosApp;
 			productReference = 7555FF7B242A565900829871 /* WhosNext.app */;
@@ -223,7 +223,7 @@
 			);
 			mainGroup = 7555FF72242A565900829871;
 			packageReferences = (
-				5C9FA25C2C36B12D008E5254 /* XCRemoteSwiftPackageReference "KMP-ObservableViewModel" */,
+				5CBEE1DF2C398A09003DC5D7 /* XCRemoteSwiftPackageReference "KMP-ObservableViewModel" */,
 			);
 			productRefGroup = 7555FF7C242A565900829871 /* Products */;
 			projectDirPath = "";
@@ -288,7 +288,7 @@
 				5CCA1EA32B900C0600538774 /* CircularProgress.swift in Sources */,
 				2152FB042600AC8F00CF470E /* WhosNextApp.swift in Sources */,
 				5C5B527B2B90C91B00CE74C8 /* HeaderLogo.swift in Sources */,
-				D44ACFA034CE7EF519DEED32 /* TimerScreenInComposeUIViewControllerRepresentable.swift in Sources */,
+				FF01EA755101562FE1E3D9D1 /* TimerScreenInComposeUIViewControllerRepresentable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,7 +507,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		5C9FA25C2C36B12D008E5254 /* XCRemoteSwiftPackageReference "KMP-ObservableViewModel" */ = {
+		5CBEE1DF2C398A09003DC5D7 /* XCRemoteSwiftPackageReference "KMP-ObservableViewModel" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/rickclephas/KMP-ObservableViewModel.git";
 			requirement = {
@@ -518,14 +518,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		5C9FA25D2C36B12D008E5254 /* KMPObservableViewModelCore */ = {
+		5CBEE1E02C398A09003DC5D7 /* KMPObservableViewModelCore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5C9FA25C2C36B12D008E5254 /* XCRemoteSwiftPackageReference "KMP-ObservableViewModel" */;
+			package = 5CBEE1DF2C398A09003DC5D7 /* XCRemoteSwiftPackageReference "KMP-ObservableViewModel" */;
 			productName = KMPObservableViewModelCore;
 		};
-		5C9FA25F2C36B12D008E5254 /* KMPObservableViewModelSwiftUI */ = {
+		5CBEE1E22C398A09003DC5D7 /* KMPObservableViewModelSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5C9FA25C2C36B12D008E5254 /* XCRemoteSwiftPackageReference "KMP-ObservableViewModel" */;
+			package = 5CBEE1DF2C398A09003DC5D7 /* XCRemoteSwiftPackageReference "KMP-ObservableViewModel" */;
 			productName = KMPObservableViewModelSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */

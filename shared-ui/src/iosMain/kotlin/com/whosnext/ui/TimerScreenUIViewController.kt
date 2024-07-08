@@ -20,7 +20,8 @@ internal fun TimerScreenInCompose() {
     val viewModel = remember {
         try {
             DependencyInjection.initKoin()
-        } catch (ignore: ApplicationAlreadyStartedException) { }
+        } catch (ignore: ApplicationAlreadyStartedException) {
+        }
         ViewModels.timerViewModel()
     }
 

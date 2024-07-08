@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.google.ksp)
     alias(libs.plugins.nativecoroutines)
     alias(libs.plugins.kotlinx.atomicfu)
+    alias(libs.plugins.composeuiviewcontroller)
 }
 
 android {
