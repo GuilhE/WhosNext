@@ -17,42 +17,48 @@ private val whosNextFontFamily
     @Composable
     get() = FontFamily(Font(Res.font.whosnext_light_italic))
 
-internal val labelTypography
+internal val labelTypography: Typography
     @Composable
-    get() = Typography(
-        displayLarge = MaterialTheme.typography.displayLarge.copy(fontFamily = helveticaNeueFontFamily),
-        displayMedium = MaterialTheme.typography.displayMedium.copy(fontFamily = helveticaNeueFontFamily),
-        displaySmall = MaterialTheme.typography.displaySmall.copy(fontFamily = helveticaNeueFontFamily),
-        headlineLarge = MaterialTheme.typography.headlineLarge.copy(fontFamily = helveticaNeueFontFamily),
-        headlineMedium = MaterialTheme.typography.headlineMedium.copy(fontFamily = helveticaNeueFontFamily),
-        headlineSmall = MaterialTheme.typography.headlineSmall.copy(fontFamily = helveticaNeueFontFamily),
-        titleLarge = MaterialTheme.typography.titleLarge.copy(fontFamily = helveticaNeueFontFamily),
-        titleMedium = MaterialTheme.typography.titleMedium.copy(fontFamily = helveticaNeueFontFamily),
-        titleSmall = MaterialTheme.typography.titleSmall.copy(fontFamily = helveticaNeueFontFamily),
-        bodyLarge = MaterialTheme.typography.bodyLarge.copy(fontFamily = helveticaNeueFontFamily),
-        bodyMedium = MaterialTheme.typography.bodyMedium.copy(fontFamily = helveticaNeueFontFamily),
-        bodySmall = MaterialTheme.typography.bodySmall.copy(fontFamily = helveticaNeueFontFamily),
-        labelLarge = MaterialTheme.typography.labelLarge.copy(fontFamily = helveticaNeueFontFamily),
-        labelMedium = MaterialTheme.typography.labelMedium.copy(fontFamily = helveticaNeueFontFamily),
-        labelSmall = MaterialTheme.typography.labelSmall.copy(fontFamily = helveticaNeueFontFamily),
-    )
+    get() {
+        val ff = helveticaNeueFontFamily
+        return Typography(
+            displayLarge = MaterialTheme.typography.displayLarge.copy(fontFamily = ff),
+            displayMedium = MaterialTheme.typography.displayMedium.copy(fontFamily = ff),
+            displaySmall = MaterialTheme.typography.displaySmall.copy(fontFamily = ff),
+            headlineLarge = MaterialTheme.typography.headlineLarge.copy(fontFamily = ff),
+            headlineMedium = MaterialTheme.typography.headlineMedium.copy(fontFamily = ff),
+            headlineSmall = MaterialTheme.typography.headlineSmall.copy(fontFamily = ff),
+            titleLarge = MaterialTheme.typography.titleLarge.copy(fontFamily = ff),
+            titleMedium = MaterialTheme.typography.titleMedium.copy(fontFamily = ff),
+            titleSmall = MaterialTheme.typography.titleSmall.copy(fontFamily = ff),
+            bodyLarge = MaterialTheme.typography.bodyLarge.copy(fontFamily = ff),
+            bodyMedium = MaterialTheme.typography.bodyMedium.copy(fontFamily = ff),
+            bodySmall = MaterialTheme.typography.bodySmall.copy(fontFamily = ff),
+            labelLarge = MaterialTheme.typography.labelLarge.copy(fontFamily = ff),
+            labelMedium = MaterialTheme.typography.labelMedium.copy(fontFamily = ff),
+            labelSmall = MaterialTheme.typography.labelSmall.copy(fontFamily = ff),
+        )
+    }
 
-internal val digitsTypography
+internal val digitsTypography: Typography
     @Composable
-    get() = Typography(
-        displayLarge = MaterialTheme.typography.displayLarge.copy(fontFamily = whosNextFontFamily),
-        displayMedium = MaterialTheme.typography.displayMedium.copy(fontFamily = whosNextFontFamily),
-        displaySmall = MaterialTheme.typography.displaySmall.copy(fontFamily = whosNextFontFamily),
-        headlineLarge = MaterialTheme.typography.headlineLarge.copy(fontFamily = whosNextFontFamily),
-        headlineMedium = MaterialTheme.typography.headlineMedium.copy(fontFamily = whosNextFontFamily),
-        headlineSmall = MaterialTheme.typography.headlineSmall.copy(fontFamily = whosNextFontFamily),
-        titleLarge = MaterialTheme.typography.titleLarge.copy(fontFamily = whosNextFontFamily),
-        titleMedium = MaterialTheme.typography.titleMedium.copy(fontFamily = whosNextFontFamily),
-        titleSmall = MaterialTheme.typography.titleSmall.copy(fontFamily = whosNextFontFamily),
-        bodyLarge = MaterialTheme.typography.bodyLarge.copy(fontFamily = whosNextFontFamily),
-        bodyMedium = MaterialTheme.typography.bodyMedium.copy(fontFamily = whosNextFontFamily),
-        bodySmall = MaterialTheme.typography.bodySmall.copy(fontFamily = whosNextFontFamily),
-        labelLarge = MaterialTheme.typography.labelLarge.copy(fontFamily = whosNextFontFamily),
-        labelMedium = MaterialTheme.typography.labelMedium.copy(fontFamily = whosNextFontFamily),
-        labelSmall = MaterialTheme.typography.labelSmall.copy(fontFamily = whosNextFontFamily),
-    )
+    get() {
+        val ff = whosNextFontFamily
+        return Typography(
+            displayLarge = MaterialTheme.typography.displayLarge.copy(fontFamily = ff),
+            displayMedium = MaterialTheme.typography.displayMedium.copy(fontFamily = ff),
+            displaySmall = MaterialTheme.typography.displaySmall.copy(fontFamily = ff),
+            headlineLarge = MaterialTheme.typography.headlineLarge.copy(fontFamily = ff),
+            headlineMedium = MaterialTheme.typography.headlineMedium.copy(fontFamily = ff),
+            headlineSmall = MaterialTheme.typography.headlineSmall.copy(fontFamily = ff),
+            titleLarge = MaterialTheme.typography.titleLarge.copy(fontFamily = ff),
+            titleMedium = MaterialTheme.typography.titleMedium.copy(fontFamily = ff),
+            titleSmall = MaterialTheme.typography.titleSmall.copy(fontFamily = ff),
+            bodyLarge = MaterialTheme.typography.bodyLarge.copy(fontFamily = ff),
+            bodyMedium = MaterialTheme.typography.bodyMedium.copy(fontFamily = ff),
+            bodySmall = MaterialTheme.typography.bodySmall.copy(fontFamily = ff),
+            labelLarge = MaterialTheme.typography.labelLarge.copy(fontFamily = ff),
+            labelMedium = MaterialTheme.typography.labelMedium.copy(fontFamily = ff),
+            labelSmall = MaterialTheme.typography.labelSmall.copy(fontFamily = ff),
+        )
+    }
