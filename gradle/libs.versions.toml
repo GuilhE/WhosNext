@@ -25,8 +25,8 @@ androidxComposeUiUtilAndroid = "1.6.8"
 
 #======Multiplatform
 kermit = "2.0.4"
-koin = "3.6.0-alpha3"
-nativecoroutines = "1.0.0-ALPHA-31-kotlin-2.0.20-Beta1"
+koin = "3.6.0-Beta4"
+nativecoroutines = "1.0.0-ALPHA-32-kotlin-2.0.20-Beta2"
 kmpViewModel = "1.0.0-BETA-3-kotlin-2.0.20-Beta1"
 kmpSettings = "1.1.1"
 kmpConstraintlayout = "0.3.1"

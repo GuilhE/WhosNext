@@ -1,17 +1,17 @@
+
 plugins {
     id("buildlogic.plugins.kmp.library.android")
     alias(libs.plugins.kotlinx.serialization)
     alias(libs.plugins.google.ksp)
     alias(libs.plugins.nativecoroutines)
     alias(libs.plugins.kotlinx.atomicfu)
-    alias(libs.plugins.composeuiviewcontroller)
 }
 
 android {
     namespace = "com.whosnext.shared"
 }
 
-@OptIn(org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalWasmDsl::class)
+@OptIn(org.jetbrains.kotlin.gradle.ExperimentalWasmDsl::class)
 kotlin {
     androidTarget()
     jvm()

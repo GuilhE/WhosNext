@@ -14,7 +14,7 @@ android {
     namespace = "com.whosnext.ui"
 }
 
-@OptIn(org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalWasmDsl::class)
+@OptIn(org.jetbrains.kotlin.gradle.ExperimentalWasmDsl::class)
 kotlin {
     jvm("desktop")
     wasmJs { browser() }
