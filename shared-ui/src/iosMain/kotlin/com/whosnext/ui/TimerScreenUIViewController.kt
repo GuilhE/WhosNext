@@ -12,7 +12,7 @@ import com.github.guilhe.kmp.composeuiviewcontroller.ComposeUIViewController
 import com.whosnext.app.DependencyInjection
 import com.whosnext.app.ViewModels
 import com.whosnext.ui.screens.TimerScreen
-import org.koin.core.error.ApplicationAlreadyStartedException
+import org.koin.core.error.KoinApplicationAlreadyStartedException
 
 @ComposeUIViewController
 @Composable
@@ -20,7 +20,7 @@ internal fun TimerScreenInCompose() {
     val viewModel = remember {
         try {
             DependencyInjection.initKoin()
-        } catch (ignore: ApplicationAlreadyStartedException) {
+        } catch (ignore: KoinApplicationAlreadyStartedException) {
         }
         ViewModels.timerViewModel()
     }
