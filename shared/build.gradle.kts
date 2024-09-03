@@ -38,6 +38,8 @@ kotlin {
             api(libs.kmp.viewmodel)
             api(libs.kmp.koin.core)
             api(libs.kmp.kermit)
+            //https://github.com/Kotlin/kotlinx-atomicfu/issues/469#issuecomment-2326868412
+            implementation("org.jetbrains.kotlinx:atomicfu:0.25.0")
         }
         androidMain.dependencies { implementation(libs.kmp.koin.android) }
         iosMain {
