@@ -44,6 +44,10 @@ class AndroidAppConventionPlugin : Plugin<Project> {
                     )
                 )
             }
+            
+            buildFeatures {
+                compose = true
+            }
 
             compileOptions {
                 sourceCompatibility = JavaVersion.VERSION_17
