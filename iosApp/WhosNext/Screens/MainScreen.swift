@@ -4,10 +4,10 @@ struct MainScreen: View {
     @State private var showSwiftTimer = false
     @State private var showComposeTimer = false
     @State private var animateIntro = true
-    
+
     var body: some View {
         ZStack {
-            if(!showSwiftTimer && !showComposeTimer) {
+            if !showSwiftTimer && !showComposeTimer {
                 SplashScreen(
                     animate: animateIntro,
                     onSwift: { showSwiftTimer = true },
@@ -15,8 +15,8 @@ struct MainScreen: View {
                 )
                 .transition(.opacity.animation(.linear(duration: 0.5)))
             }
-            
-            if(showSwiftTimer) {
+
+            if showSwiftTimer {
                 TimerScreenInSwift(
                     onClose: {
                         animateIntro = false
@@ -25,8 +25,8 @@ struct MainScreen: View {
                 )
                 .transition(.opacity.animation(.linear(duration: 0.5)))
             }
-            
-            if(showComposeTimer) {
+
+            if showComposeTimer {
                 TimerScreenInCompose(
                     onClose: {
                         animateIntro = false

@@ -9,11 +9,11 @@ struct BottomButtons: View {
     let onPause: () -> Void
     let onReset: () -> Void
     let onStop: () -> Void
-    
+
     var body: some View {
-        HStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: 40) {
+        HStack(alignment: /*@START_MENU_TOKEN@*/ .center/*@END_MENU_TOKEN@*/, spacing: 40) {
             Button(action: { isCountingDown == true ? onPause() : onStart() }) {
-                Image(isCountingDown ? ImageRecources.btPause: ImageRecources.btPlay)
+                Image(isCountingDown ? ImageRecources.btPause : ImageRecources.btPlay)
                     .resizable()
                     .scaledToFit()
             }
@@ -40,5 +40,5 @@ struct BottomButtons: View {
             BottomButtons(value: 60, isCountingDown: false, isRestarting: true, isStopped: true, onStart: {}, onPause: {}, onReset: {}, onStop: {})
         }
     }
-    .ignoresSafeArea()    
+    .ignoresSafeArea()
 }

@@ -3,7 +3,7 @@ import SwiftUI
 struct HeaderLogo: View {
     let isRestarting: Bool
     private let chronoAnimation = EasingFunctions.fastOutSlowInEasing(duration: 0.05).repeatForever(autoreverses: true)
-    
+
     var body: some View {
         ZStack {
             Image(ImageRecources.icLogoAlt)

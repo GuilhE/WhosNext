@@ -3,7 +3,6 @@ import WhosNextShared
 
 @main
 struct WhosNextApp: App {
-
     init() {
         DependencyInjection().doInitKoin { _ in }
     }
@@ -11,7 +10,7 @@ struct WhosNextApp: App {
     var body: some Scene {
         WindowGroup {
             MainScreen()
-                //.onAppear() { FontResources.printFontNames() }
+            // .onAppear() { FontResources.printFontNames() }
         }
     }
 }

@@ -4,9 +4,9 @@ struct SplashScreen: View {
     let animate: Bool
     let onSwift: () -> Void
     let onCompose: () -> Void
-    
+
     @State private var showTeams = false
-    
+
     var body: some View {
         ZStack {
             ColorsPallete.greenAlt
@@ -19,7 +19,7 @@ struct SplashScreen: View {
                     .frame(height: 170, alignment: .top)
                     .rotationEffect(.degrees(180))
                     .foregroundColor(.white)
-                if(!animate || showTeams) {
+                if !animate || showTeams {
                     Teams
                 } else {
                     Image(ImageRecources.icLogo)
@@ -38,17 +38,16 @@ struct SplashScreen: View {
             do {
                 try await Task.sleep(nanoseconds: animate == true ? 1_000_000_000 : 0_000_000_000)
                 showTeams.toggle()
-            }
-            catch {
+            } catch {
                 showTeams.toggle()
             }
         }
     }
-    
+
     @State private var textOpacity: Double = 0
     @State private var firstImageOffset: CGFloat = -150
     @State private var secondImageOffset: CGFloat = 150
-    
+
     private var Teams: some View {
         VStack {
             HStack {
@@ -60,7 +59,7 @@ struct SplashScreen: View {
                     .padding()
                     .onTapGesture { onSwift() }
                     .offset(x: firstImageOffset)
-                
+
                 Image(ImageRecources.icCompose)
                     .resizable()
                     .foregroundColor(.white)
@@ -70,7 +69,7 @@ struct SplashScreen: View {
                     .onTapGesture { onCompose() }
                     .offset(x: secondImageOffset)
             }
-            
+
             Text(StringResources.lblTeams)
                 .font(Font.custom(FontResources.helveticaNeueLight, size: 25).italic())
                 .foregroundColor(Color.white)
@@ -80,7 +79,7 @@ struct SplashScreen: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
         .padding()
         .onAppear {
-            if(animate) {
+            if animate {
                 withAnimation(Animation.interpolatingSpring(stiffness: 150, damping: 18, initialVelocity: 0)) {
                     textOpacity = 1
                     firstImageOffset = 0

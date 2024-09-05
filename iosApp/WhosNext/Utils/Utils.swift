@@ -1,13 +1,13 @@
-import SwiftUI
 import AVFoundation
+import SwiftUI
 
-struct StringResources {
+enum StringResources {
     static let lblTeams = "Choose your Team"
     static let lblMinutes = "Minutes"
     static let lblSeconds = "Seconds"
 }
 
-struct ImageRecources {
+enum ImageRecources {
     static let bgTexture = "bg_texture"
     static let bgWatch = "bg_watch"
     static let icSwift = "ic_swift"
@@ -24,10 +24,10 @@ struct ImageRecources {
     static let btReset = "bt_reset"
 }
 
-struct FontResources { 
+enum FontResources {
     static let helveticaNeueLight = "HelveticaNeue-Light"
     static let whosNext = "WhosNext-LightItalic"
-    
+
     static func printFontNames() {
         for family: String in UIFont.familyNames {
             print(family)
@@ -38,11 +38,11 @@ struct FontResources {
     }
 }
 
-struct AudioResources {
+enum AudioResources {
     static let timesUp = "timesup"
 }
 
-struct ColorsPallete {
+enum ColorsPallete {
     static let green = Color("green")
     static let greenAlt = Color("greenAlt")
     static let whiteGhost = Color("whiteGhost")
@@ -51,7 +51,7 @@ struct ColorsPallete {
     static let yellow = Color("yellow")
     static let orange = Color("orange")
     static let purple = Color("purple")
-    
+
     static func toColor(index: Int32) -> Color {
         switch index {
         case 1: return ColorsPallete.blue
@@ -65,9 +65,8 @@ struct ColorsPallete {
 }
 
 struct TimesUpSoundPlayer {
-    
-    private var audioPlayer: AVAudioPlayer? = nil
-    
+    private var audioPlayer: AVAudioPlayer?
+
     init() {
         guard let soundURL = Bundle.main.url(forResource: AudioResources.timesUp, withExtension: "mp3") else {
             fatalError("Unable to find \(AudioResources.timesUp) in bundle")
@@ -78,21 +77,21 @@ struct TimesUpSoundPlayer {
             print(error.localizedDescription)
         }
     }
-    
+
     func play() {
         audioPlayer.map { player in
-            if(!player.isPlaying) {
+            if !player.isPlaying {
                 player.play()
             }
         }
     }
 }
 
-struct EasingFunctions {
+enum EasingFunctions {
     static func linearOutSlowInEasing(duration: Double) -> Animation {
         return Animation.timingCurve(0.0, 0.0, 0.2, 1.0, duration: duration)
     }
-    
+
     static func fastOutSlowInEasing(duration: Double) -> Animation {
         return Animation.timingCurve(0.4, 0.0, 0.2, 1.0, duration: duration)
     }

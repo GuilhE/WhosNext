@@ -1,6 +1,6 @@
 import SwiftUI
-import WhosNextShared
 import WhosNextComposables
+import WhosNextShared
 
 struct Timer: View {
     let uiState: TimerUiState
@@ -15,51 +15,51 @@ struct Timer: View {
     let onStop: () -> Void
     let onSettingTime: () -> Void
     let onSetTime: (Int32) -> Void
-    
+
     private let DRAG_STEP_LAG: Float = 400
-    
+
     @State private var isDraggingLeft = false
     @State private var lastDrag: Float = 0.0
     @State private var lastDragY: CGFloat = 0.0
     @State private var minutes: Int32 = 0
     @State private var seconds: Int32 = 0
-    @State private var progress : Float = 0.0
-    
+    @State private var progress: Float = 0.0
+
     private var timeDrag: some Gesture {
         DragGesture()
             .onChanged { value in
-                if (uiState.isSettingTimer) {
+                if uiState.isSettingTimer {
                     let left = value.location.x < UIScreen.main.bounds.size.width / 2
-                    if (lastDrag > DRAG_STEP_LAG) {
+                    if lastDrag > DRAG_STEP_LAG {
                         lastDrag = 0.0
                         let res: Int32 = lastDragY - value.location.y > 0 ? 1 : -1
-                        if (left) {
-                            minutes += (0...59).contains(minutes + res) ? res : 0
+                        if left {
+                            minutes += (0 ... 59).contains(minutes + res) ? res : 0
                         } else {
-                            seconds += (0...59).contains(seconds + res) ? res : 0
+                            seconds += (0 ... 59).contains(seconds + res) ? res : 0
                         }
                     } else {
-                        //to "reduce" drag velocity and reset when changing sides
+                        // to "reduce" drag velocity and reset when changing sides
                         let verticalDrag = isDraggingLeft == left ? value.translation.height : 0
                         lastDrag += abs(Float(verticalDrag))
                     }
                     isDraggingLeft = left
                     lastDragY = value.location.y
                 } else {
-                    if (uiState.isStopped()) {
+                    if uiState.isStopped() {
                         lastDrag = 0
                         lastDragY = 0
                         onSettingTime()
                     }
                 }
             }
-            .onEnded { value in
-                if (uiState.isSettingTimer) {
+            .onEnded { _ in
+                if uiState.isSettingTimer {
                     onSetTime(UtilsKt.minutesToSeconds(time: minutes) + seconds)
                 }
             }
     }
-    
+
     var body: some View {
         ZStack {
             backgroundColor
@@ -92,7 +92,7 @@ struct Timer: View {
                     onStart: onStart,
                     onPause: onPause,
                     onReset: onReset,
-                    onStop:  onStop
+                    onStop: onStop
                 )
                 .frame(maxHeight: .infinity, alignment: .bottom)
                 .padding(.bottom, 73)
@@ -101,7 +101,7 @@ struct Timer: View {
             TimeDragOverlay
         }
         .onAppear {
-            //when restoring state
+            // when restoring state
             progress = uiState.progress / 100
         }
         .onChange(of: uiState) { new in
@@ -109,11 +109,11 @@ struct Timer: View {
         }
         .gesture(timeDrag)
     }
-    
+
     private var TimeDragOverlay: some View {
         ZStack {
             Color.black.opacity(0.85)
-            HStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/) {
+            HStack(alignment: /*@START_MENU_TOKEN@*/ .center/*@END_MENU_TOKEN@*/) {
                 Text(UtilsKt.padTime(time: minutes))
                     .font(Font.custom(FontResources.whosNext, size: 57))
                     .foregroundColor(Color.white)
@@ -135,7 +135,7 @@ struct Timer: View {
                         .resizable()
                         .scaledToFit()
                         .foregroundColor(Color.white)
-                        .rotation3DEffect(.degrees(180), axis: (0,1,0))
+                        .rotation3DEffect(.degrees(180), axis: (0, 1, 0))
                     Text(StringResources.lblMinutes.uppercased())
                         .font(Font.custom(FontResources.helveticaNeueLight, size: 16))
                         .foregroundColor(Color.white)
@@ -171,7 +171,7 @@ struct Timer: View {
 }
 
 #Preview {
-    let animation : Animation = Animation.linear(duration: 0.25)
+    let animation: Animation = .linear(duration: 0.25)
     return Timer(
         uiState: TimerUiState(value: 0, elapsed: 0.0, progress: 0.0, backgroundIndex: 0, isSettingTimer: false, isCountingDown: false, isRestarting: true),
         countDownAnimation: animation,
@@ -184,13 +184,13 @@ struct Timer: View {
         onReset: {},
         onStop: {},
         onSettingTime: {},
-        onSetTime: { Int32 in }
+        onSetTime: { _ in }
     )
-    .ignoresSafeArea()    
+    .ignoresSafeArea()
 }
 
 #Preview {
-    let animation : Animation = Animation.linear(duration: 0.25)
+    let animation: Animation = .linear(duration: 0.25)
     return Timer(
         uiState: TimerUiState(value: 0, elapsed: 0.0, progress: 0.0, backgroundIndex: 0, isSettingTimer: true, isCountingDown: false, isRestarting: true),
         countDownAnimation: animation,
@@ -203,7 +203,7 @@ struct Timer: View {
         onReset: {},
         onStop: {},
         onSettingTime: {},
-        onSetTime: { Int32 in }
+        onSetTime: { _ in }
     )
     .ignoresSafeArea()
 }
