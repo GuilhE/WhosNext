@@ -35,9 +35,9 @@ kotlin {
             implementation(libs.kotlinx.coroutines.core)
             implementation(libs.kotlinx.serialization)
             implementation(libs.kmp.settings)
-            implementation(libs.kmp.viewmodel)
-            implementation(libs.kmp.koin.core)
-            implementation(libs.kmp.kermit)
+            api(libs.kmp.viewmodel)
+            api(libs.kmp.koin.core)
+            api(libs.kmp.kermit)
             //https://github.com/Kotlin/kotlinx-atomicfu/issues/469#issuecomment-2326868412
             implementation("org.jetbrains.kotlinx:atomicfu:0.25.0")
         }
