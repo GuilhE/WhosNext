@@ -1,3 +1,4 @@
+import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 
 plugins {
     id("buildlogic.plugins.kmp.library.android")
@@ -19,6 +20,10 @@ kotlin {
     listOf(iosX64(), iosArm64(), iosSimulatorArm64()).forEach { iosTarget ->
         iosTarget.binaries.framework {
             baseName = "WhosNextShared"
+        }
+        @OptIn(ExperimentalKotlinGradlePluginApi::class)
+        compilerOptions {
+            freeCompilerArgs.add("-Xexport-kdoc")
         }
     }
 
@@ -42,11 +47,5 @@ kotlin {
             implementation("org.jetbrains.kotlinx:atomicfu:0.25.0")
         }
         androidMain.dependencies { implementation(libs.kmp.koin.android) }
-        iosMain {
-            @Suppress("OPT_IN_USAGE")
-            compilerOptions {
-                freeCompilerArgs.add("-Xexport-kdoc")
-            }
-        }
     }
 }

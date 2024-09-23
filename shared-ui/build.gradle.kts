@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
+
 plugins {
     id("buildlogic.plugins.kmp.library.android")
     id("buildlogic.plugins.kmp.compose")
@@ -20,6 +22,10 @@ kotlin {
     wasmJs { browser() }
     listOf(iosArm64(), iosSimulatorArm64(), iosX64()).forEach { target ->
         target.binaries.framework { baseName = "WhosNextComposables" }
+        @OptIn(ExperimentalKotlinGradlePluginApi::class)
+        compilerOptions {
+            freeCompilerArgs.add("-Xbinary=bundleId=com.whosnext.ui")
+        }
     }
 
     sourceSets {
@@ -37,10 +43,9 @@ kotlin {
             dependencies {
                 implementation(projects.shared)
             }
-            @Suppress("OPT_IN_USAGE")
-            compilerOptions {
-                freeCompilerArgs.add("-Xbinary=bundleId=com.whosnext.ui")
-            }
         }
     }
 }
+
+//https://youtrack.jetbrains.com/issue/CMP-6707
+tasks.findByName("checkSandboxAndWriteProtection")?.dependsOn("syncComposeResourcesForIos")
