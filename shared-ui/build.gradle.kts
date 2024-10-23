@@ -22,7 +22,6 @@ kotlin {
     wasmJs { browser() }
     listOf(iosArm64(), iosSimulatorArm64(), iosX64()).forEach { target ->
         target.binaries.framework { baseName = "WhosNextComposables" }
-        @OptIn(ExperimentalKotlinGradlePluginApi::class)
         compilerOptions {
             freeCompilerArgs.add("-Xbinary=bundleId=com.whosnext.ui")
         }

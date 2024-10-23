@@ -1,14 +1,15 @@
 [versions]
 
 #======Kotlin
-kotlin = "2.1.0-Beta1"
+kotlin = "2.1.0-Beta2"
 kotlinxCoroutines = "1.9.0"
 kotlinxSerialization = "1.7.3"
-kotlinxAtomicFu = "0.25.0"
+kotlinxAtomicFu = "0.26.0"
 kotlinxCompose = "1.7.0"
+kotlinxBrowser = "0.2"
 
 #=====Google
-ksp = "2.1.0-Beta1-1.0.25"
+ksp = "2.1.0-Beta2-1.0.25"
 
 #======Android
 androidCompileSdk = "35"
@@ -16,19 +17,19 @@ androidTargetSdk = "35"
 androidMinSdk = "24"
 androidGradlePlugin = "8.6.1"
 androidMaterial = "1.12.0"
-androidxActivityKtx = "1.9.2"
+androidxActivityKtx = "1.9.3"
 androidxLifecycle = "2.8.6"
-androidxCompose = "1.7.3"
+androidxCompose = "1.7.4"
 androidxComposeLifecycle = "2.8.6"
 androidxComposeMaterial3 = "1.3.0"
-androidxComposeUiUtilAndroid = "1.7.3"
+androidxComposeUiUtilAndroid = "1.7.4"
 
 #======Multiplatform
 kermit = "2.0.4"
 koin = "4.0.0"
-nativecoroutines = "1.0.0-ALPHA-36"
-kmpViewModel = "1.0.0-BETA-6-kotlin-2.1.0-Beta1"
-kmpSettings = "1.1.1"
+nativecoroutines = "1.0.0-ALPHA-37-kotlin-2.1.0-Beta2"
+kmpViewModel = "1.0.0-BETA-7-kotlin-2.1.0-Beta2"
+kmpSettings = "1.2.0"
 kmpConstraintlayout = "0.3.1"
 composeuiviewcontroller = "1.1.11"
 windowSizeClass = "0.5.0"
@@ -55,6 +56,7 @@ gradle-kotlin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin",
 kotlinx-serialization = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinxSerialization" }
 kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "kotlinxCoroutines" }
 kotlinx-coroutines-swing = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-swing", version.ref = "kotlinxCoroutines" }
+kotlinx-browser = {group = "org.jetbrains.kotlinx", name = "kotlinx-browser", version.ref = "kotlinxBrowser"}
 
 #======Multiplatform
 kmp-kermit = { group = "co.touchlab", name = "kermit", version.ref = "kermit" }
