@@ -31,7 +31,7 @@ nativecoroutines = "1.0.0-ALPHA-37-kotlin-2.1.0-Beta2"
 kmpViewModel = "1.0.0-BETA-7-kotlin-2.1.0-Beta2"
 kmpSettings = "1.2.0"
 kmpConstraintlayout = "0.3.1"
-composeuiviewcontroller = "1.1.11"
+composeuiviewcontroller = "1.2.0"
 windowSizeClass = "0.5.0"
 
 [plugins]

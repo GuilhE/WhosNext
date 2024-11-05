@@ -1,5 +1,3 @@
-import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
-
 plugins {
     id("buildlogic.plugins.kmp.library.android")
     alias(libs.plugins.kotlinx.serialization)
