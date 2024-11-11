@@ -1,11 +1,12 @@
+import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
 import org.jetbrains.kotlin.gradle.targets.js.webpack.KotlinWebpackConfig
 
 plugins {
     id("buildlogic.plugins.kmp.compose")
 }
 
-@OptIn(org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalWasmDsl::class)
 kotlin {
+    @OptIn(ExperimentalWasmDsl::class)
     wasmJs {
         moduleName = "browserApp"
         browser {
