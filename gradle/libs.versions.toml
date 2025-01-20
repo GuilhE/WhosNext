@@ -2,10 +2,10 @@
 
 #======Kotlin
 kotlin = "2.1.0"
-kotlinxCoroutines = "1.9.0"
+kotlinxCoroutines = "1.10.1"
 kotlinxSerialization = "1.7.3"
 kotlinxAtomicFu = "0.26.1"
-kotlinxCompose = "1.7.1"
+kotlinxCompose = "1.7.2"
 kotlinxBrowser = "0.2"
 
 #=====Google
@@ -17,12 +17,12 @@ androidTargetSdk = "35"
 androidMinSdk = "24"
 androidGradlePlugin = "8.7.3"
 androidMaterial = "1.12.0"
-androidxActivityKtx = "1.9.3"
+androidxActivityKtx = "1.10.0"
 androidxLifecycle = "2.8.7"
-androidxCompose = "1.7.5"
+androidxCompose = "1.7.6"
 androidxComposeLifecycle = "2.8.7"
 androidxComposeMaterial3 = "1.3.1"
-androidxComposeUiUtilAndroid = "1.7.5"
+androidxComposeUiUtilAndroid = "1.7.6"
 
 #======Multiplatform
 kermit = "2.0.4"
@@ -31,7 +31,7 @@ nativecoroutines = "1.0.0-ALPHA-38"
 kmpViewModel = "1.0.0-BETA-7"
 kmpSettings = "1.2.0"
 kmpConstraintlayout = "0.3.1"
-composeuiviewcontroller = "1.2.1"
+composeuiviewcontroller = "1.2.2"
 windowSizeClass = "0.5.0"
 
 [plugins]
