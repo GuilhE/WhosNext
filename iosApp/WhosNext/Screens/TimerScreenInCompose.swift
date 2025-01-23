@@ -20,6 +20,8 @@ struct TimerScreenInCompose: View {
 }
 
 #Preview {
-    TimerScreenInCompose(onClose: {})
+    TimerScreenInCompose(onClose: {
+        print("onClose clicked")
+    })
         .ignoresSafeArea()
 }
