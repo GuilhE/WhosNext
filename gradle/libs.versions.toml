@@ -4,7 +4,7 @@
 kotlin = "2.1.10"
 kotlinxCoroutines = "1.10.1"
 kotlinxSerialization = "1.8.0"
-kotlinxAtomicFu = "0.26.1"
+kotlinxAtomicFu = "0.27.0"
 kotlinxCompose = "1.8.0-alpha04"
 kotlinxBrowser = "0.3"
 

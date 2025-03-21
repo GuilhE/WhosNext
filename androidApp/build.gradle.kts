@@ -6,8 +6,8 @@ android {
     namespace = "com.whosnext.app"
     defaultConfig {
         applicationId = "com.whosnext.app"
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 6
+        versionName = "2.0.0"
 
         resValue("string", "app_name_label", "WhosNext")
     }
