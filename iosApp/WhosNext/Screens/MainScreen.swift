@@ -13,7 +13,7 @@ struct MainScreen: View {
                     onSwift: { showSwiftTimer = true },
                     onCompose: { showComposeTimer = true }
                 )
-                .transition(.opacity.animation(.linear(duration: 0.5)))
+                    .transition(.opacity.animation(.linear(duration: 0.5)))
             }
 
             if showSwiftTimer {

@@ -7,6 +7,7 @@ import com.rickclephas.kmp.observableviewmodel.coroutineScope
 import com.whosnext.app.fsm.TimerState
 import com.whosnext.app.fsm.TimerStateMachine
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
@@ -50,7 +51,7 @@ class TimerViewModel(stateRestoreEnabled: Boolean = true) : ViewModel() {
      * [TimerUiState] flow to observe ui state changes
      */
     @NativeCoroutinesState
-    val uiState = _uiState.asStateFlow()
+    val uiState: StateFlow<TimerUiState> = _uiState.asStateFlow()
 
     init {
         if (!stateRestoreEnabled) {

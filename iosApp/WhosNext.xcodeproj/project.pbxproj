@@ -512,7 +512,7 @@
 			repositoryURL = "https://github.com/rickclephas/KMP-ObservableViewModel.git";
 			requirement = {
 				kind = exactVersion;
-				version = "1.0.0-BETA-10";
+				version = "1.0.0-BETA-12";
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

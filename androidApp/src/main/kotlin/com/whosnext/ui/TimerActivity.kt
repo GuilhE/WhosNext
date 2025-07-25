@@ -7,6 +7,7 @@ import androidx.activity.compose.setContent
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.layout.Box
+import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -14,6 +15,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.view.WindowCompat
 import com.whosnext.app.R
 import com.whosnext.app.viewmodel.TimerViewModel
@@ -83,4 +85,10 @@ class TimerActivity : ComponentActivity() {
             }
         }
     }
+}
+
+@Preview
+@Composable
+private fun Preview() {
+    SplashScreen()
 }
