@@ -12,6 +12,7 @@ ComposeUiViewController {
 
 android {
     namespace = "com.whosnext.ui"
+    dependencies { debugImplementation(compose.uiTooling) }
 }
 
 @OptIn(org.jetbrains.kotlin.gradle.ExperimentalWasmDsl::class)
@@ -32,9 +33,7 @@ kotlin {
             implementation(compose.material3)
             implementation(compose.ui)
             implementation(compose.components.resources)
-        }
-        val desktopMain by getting {
-            dependencies { implementation(compose.preview) }
+            implementation(compose.components.uiToolingPreview)
         }
         iosMain {
             dependencies {

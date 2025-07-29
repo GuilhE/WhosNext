@@ -1,6 +1,5 @@
 package com.whosnext.ui.previews.composables
 
-import androidx.compose.desktop.ui.tooling.preview.Preview
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -10,6 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import com.whosnext.ui.composables.BottomButtons
 import com.whosnext.ui.theme.ColorPallet
+import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @Preview
 @Composable

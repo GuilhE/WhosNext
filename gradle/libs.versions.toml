@@ -11,9 +11,9 @@ kotlinxBrowser = "0.3"
 #=====Google
 ksp = "2.2.0-2.0.2"
 
-#======Android
-androidCompileSdk = "35"
-androidTargetSdk = "35"
+#======3
+androidCompileSdk = "36"
+androidTargetSdk = "36"
 androidMinSdk = "24"
 androidGradlePlugin = "8.11.1"
 androidMaterial = "1.12.0"
