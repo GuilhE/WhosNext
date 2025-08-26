@@ -6,8 +6,8 @@ plugins {
 }
 
 ComposeUiViewController {
-    iosAppName="WhosNext"
-    targetName="WhosNext"
+    iosAppName = "WhosNext"
+    targetName = "WhosNext"
 }
 
 android {
@@ -21,9 +21,7 @@ kotlin {
     wasmJs { browser() }
     listOf(iosArm64(), iosSimulatorArm64(), iosX64()).forEach { target ->
         target.binaries.framework { baseName = "WhosNextComposables" }
-        compilerOptions {
-            freeCompilerArgs.add("-Xbinary=bundleId=com.whosnext.ui")
-        }
+        target.compilerOptions { freeCompilerArgs.add("-Xbinary=bundleId=com.whosnext.ui") }
     }
 
     sourceSets {

@@ -30,14 +30,16 @@ import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.unit.DpSize
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.CanvasBasedWindow
+import androidx.compose.ui.window.ComposeViewport
 import co.touchlab.kermit.Logger
 import com.whosnext.app.DependencyInjection
 import com.whosnext.app.ViewModels
 import com.whosnext.ui.screens.TimerScreen
+import kotlinx.browser.document
 
 @OptIn(ExperimentalComposeUiApi::class, ExperimentalMaterial3WindowSizeClassApi::class)
 fun main() {
-    CanvasBasedWindow(canvasElementId = "WhosNext") {
+    ComposeViewport(document.body!!) {
         val viewModel = remember {
             DependencyInjection.initKoin()
             ViewModels.timerViewModel().also { Logger.d("Wasm\tobject ${it.toJsReference()}") }

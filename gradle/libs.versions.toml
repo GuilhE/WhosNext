@@ -1,37 +1,35 @@
 [versions]
 
 #======Kotlin
-kotlin = "2.2.0"
+kotlin = "2.2.10"
 kotlinxCoroutines = "1.10.2"
 kotlinxSerialization = "1.9.0"
-kotlinxAtomicFu = "0.29.0"
-kotlinxCompose = "1.8.2"
-kotlinxBrowser = "0.3"
+kotlinxCompose = "1.9.0-beta03"
 
 #=====Google
-ksp = "2.2.0-2.0.2"
+ksp = "2.2.10-2.0.2"
 
 #======3
 androidCompileSdk = "36"
 androidTargetSdk = "36"
 androidMinSdk = "24"
-androidGradlePlugin = "8.11.1"
+androidGradlePlugin = "8.12.1"
 androidMaterial = "1.12.0"
 androidxActivityKtx = "1.10.1"
 androidxLifecycle = "2.9.2"
-androidxCompose = "1.8.3"
+androidxCompose = "1.9.0"
 androidxComposeLifecycle = "2.9.2"
 androidxComposeMaterial3 = "1.3.2"
-androidxComposeUiUtilAndroid = "1.8.3"
+androidxComposeUiUtilAndroid = "1.9.0"
 
 #======Multiplatform
-kermit = "2.0.6"
+kermit = "2.0.8"
 koin = "4.1.0"
-nativecoroutines = "1.0.0-ALPHA-45"
-kmpViewModel = "1.0.0-BETA-12"
+nativecoroutines = "1.0.0-ALPHA-46"
+kmpViewModel = "1.0.0-BETA-13"
 kmpSettings = "1.3.0"
 kmpConstraintlayout = "0.6.0"
-composeuiviewcontroller = "2.2.0-1.8.2"
+composeuiviewcontroller = "2.2.10-1.9.0-beta03"
 windowSizeClass = "0.5.0"
 
 [plugins]
@@ -42,7 +40,6 @@ google-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 kotlinx-compose = { id = "org.jetbrains.compose", version.ref = "kotlinxCompose" }
 kotlinx-compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlinx-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
-kotlinx-atomicfu = { id = "org.jetbrains.kotlinx.atomicfu", version.ref = "kotlinxAtomicFu" }
 nativecoroutines = { id = "com.rickclephas.kmp.nativecoroutines", version.ref = "nativecoroutines" }
 composeuiviewcontroller = { id = "io.github.guilhe.kmp.plugin-composeuiviewcontroller", version.ref = "composeuiviewcontroller" }
 
@@ -56,7 +53,6 @@ gradle-kotlin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin",
 kotlinx-serialization = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinxSerialization" }
 kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "kotlinxCoroutines" }
 kotlinx-coroutines-swing = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-swing", version.ref = "kotlinxCoroutines" }
-kotlinx-browser = {group = "org.jetbrains.kotlinx", name = "kotlinx-browser", version.ref = "kotlinxBrowser"}
 
 #======Multiplatform
 kmp-kermit = { group = "co.touchlab", name = "kermit", version.ref = "kermit" }
