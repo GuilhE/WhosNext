@@ -1,6 +1,6 @@
 package com.whosnext.ui.composables
 
-import androidx.compose.animation.core.AnimationSpec
+import androidx.compose.animation.core.Easing
 import androidx.compose.animation.core.LinearOutSlowInEasing
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
@@ -23,9 +23,12 @@ internal fun CircularProgress(
     startingAngle: Float = 270f,
     progress: Float,
     animate: Boolean = true,
-    animationSpec: AnimationSpec<Float> = tween(durationMillis = 250, easing = LinearOutSlowInEasing)
+    animationSpec: ProgressAnimationSpec = ProgressAnimationSpec(250, LinearOutSlowInEasing)
 ) {
-    val animatedProgress: Float by animateFloatAsState(targetValue = progress, animationSpec = animationSpec)
+    val animatedProgress: Float by animateFloatAsState(
+        targetValue = progress,
+        animationSpec = tween(durationMillis = animationSpec.durationMillis, easing = animationSpec.easing)
+    )
     Canvas(modifier) {
         val sweepAngle = (360 * if (animate) animatedProgress else progress) / 100
         val ringRadius = size.minDimension * 0.15f
@@ -35,3 +38,5 @@ internal fun CircularProgress(
         drawArc(color, startingAngle, sweepAngle, false, size = size, style = Stroke(ringRadius, cap = StrokeCap.Round))
     }
 }
+
+data class ProgressAnimationSpec(val durationMillis: Int, val easing: Easing)

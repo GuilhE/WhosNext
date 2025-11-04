@@ -74,7 +74,7 @@ internal fun CenterProgress(
                 progress = progress,
                 color = Color.White,
                 backgroundColor = Color.Transparent,
-                animationSpec = tween(
+                animationSpec = ProgressAnimationSpec(
                     durationMillis = if (isRestarting) RESTART_ANIMATION_DURATION else (if (isCountingDown) COUNTDOWN_STEP_ANIMATION_DURATION else STOP_ANIMATION_DURATION),
                     easing = if (isCountingDown) LinearEasing else FastOutSlowInEasing
                 )

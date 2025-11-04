@@ -25,11 +25,17 @@ struct Timer: View {
     @State private var seconds: Int32 = 0
     @State private var progress: Float = 0.0
 
+    private var screenWidth: CGFloat {
+        UIApplication.shared.connectedScenes
+            .compactMap { $0 as? UIWindowScene }
+            .first?.screen.bounds.width ?? 0
+    }
+
     private var timeDrag: some Gesture {
         DragGesture()
             .onChanged { value in
                 if uiState.isSettingTimer {
-                    let left = value.location.x < UIScreen.main.bounds.size.width / 2
+                    let left = value.location.x < screenWidth / 2
                     if lastDrag > DRAG_STEP_LAG {
                         lastDrag = 0.0
                         let res: Int32 = lastDragY - value.location.y > 0 ? 1 : -1
@@ -104,7 +110,7 @@ struct Timer: View {
             // when restoring state
             progress = uiState.progress / 100
         }
-        .onChange(of: uiState) { new in
+        .onChange(of: uiState) { _, new in
             progress = new.progress / 100
         }
         .gesture(timeDrag)
