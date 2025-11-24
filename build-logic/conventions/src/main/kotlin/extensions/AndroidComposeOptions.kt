@@ -1,15 +1,7 @@
 package extensions
 
 import org.gradle.api.Project
-import org.gradle.api.artifacts.VersionCatalog
-import org.gradle.kotlin.dsl.dependencies
 import java.io.File
-
-internal fun Project.addComposeDependencies(libs: VersionCatalog) {
-    dependencies {
-        add("implementation", libs.findBundle("androidx.compose").get())
-    }
-}
 
 internal fun Project.buildComposeMetricsParameters(): List<String> {
     val metricParameters = mutableListOf<String>()

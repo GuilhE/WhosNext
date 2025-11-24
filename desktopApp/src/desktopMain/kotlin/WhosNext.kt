@@ -34,7 +34,8 @@ fun main() = application {
         state = WindowState(
             size = DpSize(400.dp, 800.dp),
             position = WindowPosition(Alignment.Center)
-        )
+        ),
+        alwaysOnTop = System.getProperty("compose.reload.isActive") == "true"
     ) {
         Box {
             if (!showSplash) {

@@ -1,5 +1,4 @@
 import com.android.build.gradle.internal.dsl.BaseAppModuleExtension
-import extensions.addComposeDependencies
 import extensions.addKotlinCompileOptions
 import extensions.buildComposeMetricsParameters
 import org.gradle.api.JavaVersion
@@ -25,7 +24,6 @@ class AndroidAppConventionPlugin : Plugin<Project> {
                 addKotlinAndroidConfigurations(versionCatalog)
             }
             addKotlinCompileOptions(buildComposeMetricsParameters())
-            addComposeDependencies(versionCatalog)
         }
     }
 
@@ -44,7 +42,7 @@ class AndroidAppConventionPlugin : Plugin<Project> {
                     )
                 )
             }
-            
+
             buildFeatures {
                 compose = true
             }
@@ -59,7 +57,6 @@ class AndroidAppConventionPlugin : Plugin<Project> {
                 abortOnError = false
             }
 
-            @Suppress("UnstableApiUsage")
             testOptions {
                 unitTests.apply {
                     isReturnDefaultValues = true
@@ -76,7 +73,7 @@ class AndroidAppConventionPlugin : Plugin<Project> {
                             "**/*.kotlin_module",
 //                            "**/*.version",
                             "**/*.txt",
-//                            "**/*.xml",  //if not commented it will delete all shared-ui resources
+//                            "**/*.xml",  //if not commented it will delete all KMP resources
                             "**/*.properties",
                             "/META-INF/{AL2.0,LGPL2.1}"
                         )

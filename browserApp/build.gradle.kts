@@ -12,12 +12,6 @@ kotlin {
         browser {
             commonWebpackConfig {
                 outputFileName = "browserApp.js"
-                devServer = (devServer ?: KotlinWebpackConfig.DevServer()).apply {
-                    static = (static ?: mutableListOf()).apply {
-                        add(project.rootDir.path)
-                        add(project.projectDir.path)
-                    }
-                }
             }
         }
         binaries.executable()
@@ -28,12 +22,7 @@ kotlin {
             dependencies {
                 implementation(projects.shared)
                 implementation(projects.sharedUi)
-                implementation(compose.runtime)
-                implementation(compose.foundation)
-                implementation(compose.material3)
-                implementation(compose.ui)
-                implementation(compose.components.resources)
-                implementation(libs.kmp.windowsizeclass)
+                implementation(libs.bundles.jetbrains.compose)
             }
         }
     }

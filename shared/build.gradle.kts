@@ -1,17 +1,13 @@
 plugins {
-    id("buildlogic.plugins.kmp.library.android")
+    id("buildlogic.plugins.kmp.library")
     alias(libs.plugins.kotlinx.serialization)
     alias(libs.plugins.google.ksp)
     alias(libs.plugins.nativecoroutines)
 }
 
-android {
-    namespace = "com.whosnext.shared"
-}
-
 @OptIn(org.jetbrains.kotlin.gradle.ExperimentalWasmDsl::class)
 kotlin {
-    androidTarget()
+    android { namespace = "com.whosnext.shared" }
     jvm()
     wasmJs { browser() }
     listOf(iosX64(), iosArm64(), iosSimulatorArm64()).forEach { iosTarget ->
@@ -23,11 +19,11 @@ kotlin {
         commonMain.dependencies {
             implementation(libs.kotlinx.coroutines.core)
             implementation(libs.kotlinx.serialization)
-            implementation(libs.kmp.settings)
-            api(libs.kmp.viewmodel)
-            api(libs.kmp.koin.core)
-            api(libs.kmp.kermit)
+            implementation(libs.multiplatform.settings)
+            api(libs.multiplatform.viewmodel)
+            api(libs.koin.core)
+            api(libs.kermit)
         }
-        androidMain.dependencies { implementation(libs.kmp.koin.android) }
+        androidMain.dependencies { implementation(libs.koin.android) }
     }
 }

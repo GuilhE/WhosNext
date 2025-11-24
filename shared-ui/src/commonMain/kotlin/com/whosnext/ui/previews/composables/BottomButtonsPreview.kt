@@ -7,9 +7,9 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import com.whosnext.ui.composables.BottomButtons
 import com.whosnext.ui.theme.ColorPallet
-import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @Preview
 @Composable

@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 plugins {
     `kotlin-dsl`
 }
@@ -5,6 +7,7 @@ plugins {
 repositories {
     google()
     mavenCentral()
+    maven("https://redirector.kotlinlang.org/maven/dev")
 }
 
 java {
@@ -12,8 +15,8 @@ java {
 }
 
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
-    kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_17.toString()
+    compilerOptions {
+        jvmTarget.set(JvmTarget.JVM_17)
     }
 }
 
@@ -31,7 +34,7 @@ gradlePlugin {
             implementationClass = "AndroidAppConventionPlugin"
         }
         register("KMPAndroidLibraryConventionPlugin") {
-            id = "${project.group}.kmp.library.android"
+            id = "${project.group}.kmp.library"
             implementationClass = "KMPAndroidLibraryConventionPlugin"
         }
         register("CMPLibraryConventionPlugin") {

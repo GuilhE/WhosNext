@@ -11,12 +11,9 @@ internal fun Project.addKotlinCompileOptions(options: List<String> = emptyList()
             freeCompilerArgs.addAll(
                 options + listOf(
                     "-opt-in=kotlin.RequiresOptIn",
-                    "-opt-in=kotlin.Experimental",
                     "-opt-in=kotlinx.coroutines.FlowPreview",
                     "-opt-in=kotlinx.coroutines.ExperimentalCoroutinesApi",
                     "-opt-in=kotlinx.serialization.ExperimentalSerializationApi",
-//                    "-P",
-//                    "plugin:androidx.compose.compiler.plugins.kotlin:suppressKotlinVersionCompatibilityCheck=2.0.0-RC2"
                 )
             )
         }

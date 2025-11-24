@@ -36,8 +36,8 @@ kotlin {
             dependencies {
                 implementation(projects.shared)
                 implementation(projects.sharedUi)
-                implementation(compose.material3)
                 implementation(compose.desktop.currentOs)
+                implementation(libs.jetbrains.compose.material3)
                 implementation(libs.kotlinx.coroutines.swing)
             }
         }
