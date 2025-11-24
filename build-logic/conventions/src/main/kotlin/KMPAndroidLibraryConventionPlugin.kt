@@ -10,15 +10,16 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension
 
 class KMPAndroidLibraryConventionPlugin : Plugin<Project> {
+
     override fun apply(target: Project) = with(target) {
         pluginManager.apply("org.jetbrains.kotlin.multiplatform")
         pluginManager.apply("com.android.kotlin.multiplatform.library")
 
-        val catalog = extensions.getByType<VersionCatalogsExtension>().named("libs")
+        val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
         extensions.configure<KotlinMultiplatformExtension> {
             androidLibrary {
-                compileSdk = catalog.findVersion("androidCompileSdk").get().toString().toInt()
-                minSdk = catalog.findVersion("androidMinSdk").get().toString().toInt()
+                compileSdk = libs.findVersion("androidCompileSdk").get().toString().toInt()
+                minSdk = libs.findVersion("androidMinSdk").get().toString().toInt()
                 compilerOptions { jvmTarget.set(JvmTarget.JVM_17) }
                 lint {
                     disable.add("Instantiatable")

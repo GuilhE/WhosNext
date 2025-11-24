@@ -19,9 +19,8 @@ class AndroidAppConventionPlugin : Plugin<Project> {
                 apply("org.jetbrains.kotlin.plugin.compose")
             }
 
-            val versionCatalog = target.extensions.getByType<VersionCatalogsExtension>().named("libs")
             extensions.configure<BaseAppModuleExtension> {
-                addKotlinAndroidConfigurations(versionCatalog)
+                addKotlinAndroidConfigurations(extensions.getByType<VersionCatalogsExtension>().named("libs"))
             }
             addKotlinCompileOptions(buildComposeMetricsParameters())
         }

@@ -7,7 +7,8 @@ pluginManagement {
         mavenCentral()
         gradlePluginPortal()
         google()
-        maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
+        maven("https://redirector.kotlinlang.org/maven/dev")
+//        maven("https://maven.pkg.jetbrains.space/public/p/compose/dev/")
     }
 }
 
@@ -18,7 +19,8 @@ dependencyResolutionManagement {
         mavenLocal()
         mavenCentral()
         google()
-        maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
+        maven("https://redirector.kotlinlang.org/maven/dev")
+//        maven("https://maven.pkg.jetbrains.space/public/p/compose/dev/")
     }
 }
 
