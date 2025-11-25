@@ -1,7 +1,6 @@
 plugins {
     id("buildlogic.plugins.kmp.library")
     id("buildlogic.plugins.kmp.compose")
-    alias(libs.plugins.google.ksp)
     alias(libs.plugins.composeuiviewcontroller)
     alias(libs.plugins.stability.analyzer)
 }
