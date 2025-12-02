@@ -1,10 +1,9 @@
 [versions]
-
 #======Kotlin
-kotlin = "2.3.0-RC"
+kotlin = "2.3.0-RC2"
 kotlinxCoroutines = "1.10.2"
 kotlinxSerialization = "1.9.0"
-composeMultiplatform = "1.10.0-beta02"
+composeMultiplatform = "1.10.0-rc01"
 composeMaterial3 = "1.9.0"
 composeHotReload = "1.1.0-alpha01"
 
@@ -15,7 +14,7 @@ ksp = "2.3.3"
 androidCompileSdk = "36"
 androidTargetSdk = "36"
 androidMinSdk = "24"
-androidGradlePlugin = "8.13.1"
+androidGradlePlugin = "9.0.0-beta03"
 androidMaterial = "1.13.0"
 androidxActivityKtx = "1.12.0"
 androidxLifecycle = "2.10.0"
@@ -27,11 +26,10 @@ nativecoroutines = "1.0.0-ALPHA-48-kotlin-2.3.0-RC"
 kmpViewModel = "1.0.0"
 kmpSettings = "1.3.0"
 kmpConstraintlayout = "0.6.1"
-composeuiviewcontroller = "2.3.0-RC-1.10.0-beta02"
+composeuiviewcontroller = "2.3.0-RC2-1.10.0-rc01"
 composeStability = "0.6.0"
 
 [plugins]
-
 google-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
 kotlinx-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
@@ -44,7 +42,6 @@ composeuiviewcontroller = { id = "io.github.guilhe.kmp.plugin-composeuiviewcontr
 stability-analyzer = { id = "com.github.skydoves.compose.stability.analyzer", version.ref = "composeStability" }
 
 [libraries]
-
 #======Gradle
 gradle-android-tools = { group = "com.android.tools.build", name = "gradle", version.ref = "androidGradlePlugin" }
 gradle-kotlin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
@@ -54,6 +51,7 @@ jetbrains-compose-foundation = { group = "org.jetbrains.compose.foundation", nam
 jetbrains-compose-runtime = { group = "org.jetbrains.compose.runtime", name = "runtime", version.ref = "composeMultiplatform" }
 jetbrains-compose-runtimeSaveable = { group = "org.jetbrains.compose.runtime", name = "runtime-saveable", version.ref = "composeMultiplatform" }
 jetbrains-compose-ui = { group = "org.jetbrains.compose.ui", name = "ui", version.ref = "composeMultiplatform" }
+jetbrains-compose-ui-tooling = { group = "org.jetbrains.compose.ui", name = "ui-tooling", version.ref = "composeMultiplatform" }
 jetbrains-compose-ui-tooling-preview = { group = "org.jetbrains.compose.ui", name = "ui-tooling-preview", version.ref = "composeMultiplatform" }
 jetbrains-compose-material3 = { group = "org.jetbrains.compose.material3", name = "material3", version.ref = "composeMaterial3" }
 jetbrains-compose-material3-windowSizeClass = { group = "org.jetbrains.compose.material3", name = "material3-window-size-class", version.ref = "composeMaterial3" }
@@ -77,12 +75,12 @@ androidx-lifecycle-runtime = { group = "androidx.lifecycle", name = "lifecycle-r
 androidx-compose-activity = { group = "androidx.activity", name = "activity-compose", version.ref = "androidxActivityKtx" }
 
 [bundles]
-
 jetbrains-compose = [
     "jetbrains-compose-foundation",
     "jetbrains-compose-runtime",
     "jetbrains-compose-runtimeSaveable",
     "jetbrains-compose-ui",
+#    "jetbrains-compose-ui-tooling",
     "jetbrains-compose-ui-tooling-preview",
     "jetbrains-compose-material3",
     "jetbrains-compose-material3-windowSizeClass",

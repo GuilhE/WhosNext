@@ -1,3 +1,5 @@
+import com.android.build.api.dsl.ApplicationExtension
+import com.android.build.api.variant.ApplicationAndroidComponentsExtension
 import com.android.build.gradle.internal.dsl.BaseAppModuleExtension
 import extensions.addKotlinCompileOptions
 import extensions.buildComposeMetricsParameters
@@ -8,6 +10,7 @@ import org.gradle.api.artifacts.VersionCatalog
 import org.gradle.api.artifacts.VersionCatalogsExtension
 import org.gradle.kotlin.dsl.configure
 import org.gradle.kotlin.dsl.getByType
+import org.jetbrains.kotlin.gradle.dsl.KotlinAndroidProjectExtension
 
 class AndroidAppConventionPlugin : Plugin<Project> {
 
@@ -15,18 +18,18 @@ class AndroidAppConventionPlugin : Plugin<Project> {
         with(target) {
             with(pluginManager) {
                 apply("com.android.application")
-                apply("org.jetbrains.kotlin.android")
                 apply("org.jetbrains.kotlin.plugin.compose")
             }
 
-            extensions.configure<BaseAppModuleExtension> {
-                addKotlinAndroidConfigurations(extensions.getByType<VersionCatalogsExtension>().named("libs"))
+            val versionCatalog = target.extensions.getByType<VersionCatalogsExtension>().named("libs")
+            extensions.configure<ApplicationExtension> {
+                addKotlinAndroidConfigurations(versionCatalog)
             }
             addKotlinCompileOptions(buildComposeMetricsParameters())
         }
     }
 
-    private fun BaseAppModuleExtension.addKotlinAndroidConfigurations(libs: VersionCatalog) {
+    private fun ApplicationExtension.addKotlinAndroidConfigurations(libs: VersionCatalog) {
         apply {
             compileSdk = libs.findVersion("androidCompileSdk").get().toString().toInt()
             defaultConfig {
@@ -43,6 +46,8 @@ class AndroidAppConventionPlugin : Plugin<Project> {
             }
 
             buildFeatures {
+                buildConfig = true
+                resValues = true
                 compose = true
             }
 
