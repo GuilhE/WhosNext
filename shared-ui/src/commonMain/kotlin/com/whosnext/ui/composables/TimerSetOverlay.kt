@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalObjCRefinement::class)
+
 package com.whosnext.ui.composables
 
 import androidx.compose.animation.core.animateFloatAsState
@@ -33,7 +35,10 @@ import whosnext.shared_ui.generated.resources.ic_setter_gesture
 import whosnext.shared_ui.generated.resources.lbl_minutes
 import whosnext.shared_ui.generated.resources.lbl_seconds
 import whosnext.shared_ui.generated.resources.lbl_sep
+import kotlin.experimental.ExperimentalObjCRefinement
+import kotlin.native.HiddenFromObjC
 
+@HiddenFromObjC
 @Composable
 fun TimerSetOverlay(
     modifier: Modifier,

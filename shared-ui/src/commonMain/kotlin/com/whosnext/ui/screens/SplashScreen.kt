@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalObjCRefinement::class)
+
 package com.whosnext.ui.screens
 
 import androidx.compose.foundation.Image
@@ -16,7 +18,10 @@ import whosnext.shared_ui.generated.resources.Res
 import whosnext.shared_ui.generated.resources.bg_texture
 import whosnext.shared_ui.generated.resources.ic_logo
 import whosnext.shared_ui.generated.resources.ic_zone
+import kotlin.experimental.ExperimentalObjCRefinement
+import kotlin.native.HiddenFromObjC
 
+@HiddenFromObjC
 @Composable
 fun SplashScreen(modifier: Modifier = Modifier) {
     SplashTheme {

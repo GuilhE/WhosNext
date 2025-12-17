@@ -39,4 +39,4 @@ internal fun CircularProgress(
     }
 }
 
-data class ProgressAnimationSpec(val durationMillis: Int, val easing: Easing)
+internal data class ProgressAnimationSpec(val durationMillis: Int, val easing: Easing)

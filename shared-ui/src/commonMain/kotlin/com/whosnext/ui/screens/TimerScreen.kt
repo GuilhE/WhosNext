@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalObjCRefinement::class)
+
 package com.whosnext.ui.screens
 
 import androidx.compose.animation.AnimatedVisibility
@@ -39,7 +41,10 @@ import com.whosnext.ui.theme.YellowTheme
 import org.jetbrains.compose.resources.painterResource
 import whosnext.shared_ui.generated.resources.Res
 import whosnext.shared_ui.generated.resources.bg_texture
+import kotlin.experimental.ExperimentalObjCRefinement
+import kotlin.native.HiddenFromObjC
 
+@HiddenFromObjC
 @Composable
 fun TimerScreen(
     progress: Float,

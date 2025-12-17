@@ -1,6 +1,4 @@
 import com.android.build.api.dsl.ApplicationExtension
-import com.android.build.api.variant.ApplicationAndroidComponentsExtension
-import com.android.build.gradle.internal.dsl.BaseAppModuleExtension
 import extensions.addKotlinCompileOptions
 import extensions.buildComposeMetricsParameters
 import org.gradle.api.JavaVersion
@@ -10,7 +8,6 @@ import org.gradle.api.artifacts.VersionCatalog
 import org.gradle.api.artifacts.VersionCatalogsExtension
 import org.gradle.kotlin.dsl.configure
 import org.gradle.kotlin.dsl.getByType
-import org.jetbrains.kotlin.gradle.dsl.KotlinAndroidProjectExtension
 
 class AndroidAppConventionPlugin : Plugin<Project> {
 

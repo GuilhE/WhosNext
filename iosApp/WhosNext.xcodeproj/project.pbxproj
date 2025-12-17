@@ -26,11 +26,12 @@
 		5CCA1E992B900B6300538774 /* KMPViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCA1E982B900B6300538774 /* KMPViewModel.swift */; };
 		5CCA1EA32B900C0600538774 /* CircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCA1EA22B900C0600538774 /* CircularProgress.swift */; };
 		5CCA1EA52B900C1F00538774 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCA1EA42B900C1F00538774 /* Utils.swift */; };
-		FF01EA755101562FE1E3D9D1 /* TimerScreenInComposeUIViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7509D0834E524C5B1352E0A2 /* TimerScreenInComposeUIViewControllerRepresentable.swift */; };
+		83425DDA15CC167D64F4F1CC /* TimerScreenInComposeUIViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FCBFC60811F099DF7FF643 /* TimerScreenInComposeUIViewControllerRepresentable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		10FCBFC60811F099DF7FF643 /* TimerScreenInComposeUIViewControllerRepresentable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimerScreenInComposeUIViewControllerRepresentable.swift; path = Representables/TimerScreenInComposeUIViewControllerRepresentable.swift; sourceTree = "<group>"; };
 		2152FB032600AC8F00CF470E /* WhosNextApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhosNextApp.swift; sourceTree = "<group>"; };
 		5C281C872B9162A8001F7788 /* TimerScreenInCompose.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerScreenInCompose.swift; sourceTree = "<group>"; };
 		5C281C882B9162A8001F7788 /* SplashScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
@@ -47,7 +48,6 @@
 		5CCA1E982B900B6300538774 /* KMPViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMPViewModel.swift; sourceTree = "<group>"; };
 		5CCA1EA22B900C0600538774 /* CircularProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgress.swift; sourceTree = "<group>"; };
 		5CCA1EA42B900C1F00538774 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		7509D0834E524C5B1352E0A2 /* TimerScreenInComposeUIViewControllerRepresentable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimerScreenInComposeUIViewControllerRepresentable.swift; path = Representables/TimerScreenInComposeUIViewControllerRepresentable.swift; sourceTree = "<group>"; };
 		7555FF7B242A565900829871 /* WhosNext.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhosNext.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB3632DC29227652001CCB65 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
@@ -130,7 +130,7 @@
 				7555FF7D242A565900829871 /* WhosNext */,
 				7555FF7C242A565900829871 /* Products */,
 				42799AB246E5F90AF97AA0EF /* Frameworks */,
-				89C5FDEDB575D73818E2FDBD /* Representables */,
+				B1B6D031DBD13F3F46372C61 /* Representables */,
 			);
 			sourceTree = "<group>";
 		};
@@ -157,20 +157,20 @@
 			path = WhosNext;
 			sourceTree = "<group>";
 		};
-		89C5FDEDB575D73818E2FDBD /* Representables */ = {
-			isa = PBXGroup;
-			children = (
-				7509D0834E524C5B1352E0A2 /* TimerScreenInComposeUIViewControllerRepresentable.swift */,
-			);
-			name = Representables;
-			sourceTree = "<group>";
-		};
 		AB1DB47929225F7C00F7AF9C /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
 				AB3632DC29227652001CCB65 /* Config.xcconfig */,
 			);
 			path = Configuration;
+			sourceTree = "<group>";
+		};
+		B1B6D031DBD13F3F46372C61 /* Representables */ = {
+			isa = PBXGroup;
+			children = (
+				10FCBFC60811F099DF7FF643 /* TimerScreenInComposeUIViewControllerRepresentable.swift */,
+			);
+			name = Representables;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,7 +289,7 @@
 				5CCA1EA32B900C0600538774 /* CircularProgress.swift in Sources */,
 				2152FB042600AC8F00CF470E /* WhosNextApp.swift in Sources */,
 				5C5B527B2B90C91B00CE74C8 /* HeaderLogo.swift in Sources */,
-				FF01EA755101562FE1E3D9D1 /* TimerScreenInComposeUIViewControllerRepresentable.swift in Sources */,
+				83425DDA15CC167D64F4F1CC /* TimerScreenInComposeUIViewControllerRepresentable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,7 +439,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.whosnext.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.whosnext.kmp.app;
 				PRODUCT_NAME = "${APP_NAME}";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -474,7 +474,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.whosnext.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.whosnext.kmp.app;
 				PRODUCT_NAME = "${APP_NAME}";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
