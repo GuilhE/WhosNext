@@ -5,29 +5,28 @@ kotlinxCoroutines = "1.10.2"
 kotlinxSerialization = "1.9.0"
 composeMultiplatform = "1.10.0-rc02"
 composeMaterial3 = "1.9.0"
-composeHotReload = "1.1.0-alpha02"
+composeHotReload = "1.1.0-alpha03"
 
 #=====Google
-ksp = "2.3.3"
+ksp = "2.3.4"
 
 #======Android
 androidCompileSdk = "36"
 androidTargetSdk = "36"
 androidMinSdk = "24"
-androidGradlePlugin = "9.0.0-beta05"
+androidGradlePlugin = "9.0.0-rc02"
 androidMaterial = "1.13.0"
-androidxActivityKtx = "1.12.1"
+androidxActivityKtx = "1.12.2"
 androidxLifecycle = "2.10.0"
 
 #======Multiplatform
 kermit = "2.0.8"
 koin = "4.1.1"
-nativecoroutines = "1.0.0-ALPHA-48-kotlin-2.3.0-RC3"
-kmpViewModel = "1.0.0-kotlin-2.3.0-RC3"
+nativecoroutines = "1.0.0"
+kmpViewModel = "1.0.1"
 kmpSettings = "1.3.0"
 kmpConstraintlayout = "0.6.1"
-composeuiviewcontroller = "2.3.0-1.10.0-rc02-1"
-composeStability = "0.6.5"
+composeuiviewcontroller = "2.3.0-1.10.0-rc02-6"
 
 [plugins]
 google-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
@@ -39,7 +38,6 @@ compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "
 compose-hotReload = { id = "org.jetbrains.compose.hot-reload", version.ref = "composeHotReload"}
 nativecoroutines = { id = "com.rickclephas.kmp.nativecoroutines", version.ref = "nativecoroutines" }
 composeuiviewcontroller = { id = "io.github.guilhe.kmp.plugin-composeuiviewcontroller", version.ref = "composeuiviewcontroller" }
-stability-analyzer = { id = "com.github.skydoves.compose.stability.analyzer", version.ref = "composeStability" }
 
 [libraries]
 #======Gradle

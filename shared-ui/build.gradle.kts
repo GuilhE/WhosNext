@@ -4,7 +4,6 @@ plugins {
     id("buildlogic.plugins.kmp.library")
     id("buildlogic.plugins.kmp.compose")
     alias(libs.plugins.composeuiviewcontroller)
-    alias(libs.plugins.stability.analyzer)
 }
 
 ComposeUiViewController {

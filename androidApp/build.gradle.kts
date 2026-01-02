@@ -6,7 +6,7 @@ android {
     namespace = "com.whosnext.app"
     defaultConfig {
         applicationId = "com.whosnext.app"
-        versionCode = 6
+        versionCode = 7
         versionName = "2.0.0"
 
         resValue("string", "app_name_label", "WhosNext")
@@ -16,7 +16,7 @@ android {
         getByName("release") {
             isMinifyEnabled = true
             isShrinkResources = true
-            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"))
         }
 
         getByName("debug") {
