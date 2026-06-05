@@ -3,6 +3,8 @@ import SwiftUI
 import WhosNextComposables
 
 public struct TimerScreenInComposeRepresentable: UIViewControllerRepresentable {
+    public init() {}
+
     public func makeUIViewController(context _: Context) -> UIViewController {
         TimerScreenInComposeUIViewController().make()
     }

@@ -9,14 +9,17 @@ plugins {
 ComposeUiViewController {
     iosAppName = "WhosNext"
     targetName = "WhosNext"
+    experimentalSpmExport = true
 }
 
 kotlin {
     jvm("desktop")
     wasmJs { browser() }
 
-    android { namespace = "com.whosnext.ui" }
-    androidLibrary { androidResources.enable = true }
+    android {
+        namespace = "com.whosnext.ui"
+        androidResources.enable = true
+    }
 
     listOf(iosArm64(), iosSimulatorArm64()).forEach { target ->
         target.binaries.framework { baseName = "WhosNextComposables" }

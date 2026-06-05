@@ -20,8 +20,8 @@ kotlin {
             implementation(libs.kotlinx.serialization)
             implementation(libs.multiplatform.settings)
             api(libs.multiplatform.viewmodel)
-            api(libs.koin.core)
-            api(libs.kermit)
+            implementation(libs.koin.core)
+            implementation(libs.kermit)
         }
         androidMain.dependencies { implementation(libs.koin.android) }
     }

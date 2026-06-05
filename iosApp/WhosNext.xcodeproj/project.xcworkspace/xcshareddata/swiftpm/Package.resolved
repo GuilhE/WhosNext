@@ -1,13 +1,13 @@
 {
-  "originHash" : "88d7673b251b3cbb9c40069df64b8e0aa1c4062dac38b066e5314b1847241136",
+  "originHash" : "6a2124c297e87bb8ccd44668ac3e3efd4bb78537ab39279561d6bf4c921a1bc7",
   "pins" : [
     {
       "identity" : "kmp-observableviewmodel",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/rickclephas/KMP-ObservableViewModel.git",
       "state" : {
-        "revision" : "f6f15e942f9e231aa0c650d6b82024984573046c",
-        "version" : "1.0.0"
+        "revision" : "b7976b0854921f7fa7b4d5fb3d5b029438a1b32d",
+        "version" : "1.0.3"
       }
     }
   ],
